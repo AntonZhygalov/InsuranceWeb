@@ -1,4 +1,4 @@
-package serviceImplementation;
+package ua.lviv.lgs.service.implementation;
 
 import java.util.Calendar;
 import java.util.Date;
