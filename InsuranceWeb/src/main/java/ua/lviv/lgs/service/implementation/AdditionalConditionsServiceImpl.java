@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ua.lviv.lgs.dao.AdditionalConditionsDao;
 import ua.lviv.lgs.dao.implementation.AdditionalConditionsDaoImpl;
 import ua.lviv.lgs.entity.AdditionalConditions;
 import ua.lviv.lgs.service.AdditionalConditionsService;
@@ -12,7 +13,7 @@ import ua.lviv.lgs.service.AdditionalConditionsService;
 @Service
 public class AdditionalConditionsServiceImpl implements AdditionalConditionsService {
 	@Autowired
-	private AdditionalConditionsDaoImpl additionalConditions;
+	private AdditionalConditionsDao additionalConditions;
 
 	public void saveAdditionalConditions(String additionalConditions) {
 		this.additionalConditions.saveAdditionalConditions(new AdditionalConditions(additionalConditions));
