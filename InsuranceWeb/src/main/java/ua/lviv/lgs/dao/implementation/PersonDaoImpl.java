@@ -46,7 +46,8 @@ public class PersonDaoImpl implements PersonDao {
 
 	@Transactional
 	public Person findPersonById(int id) {
-		return em.createQuery("from Person where id like :id", Person.class).setParameter("id", id).getSingleResult();
+		return em.find(Person.class, id);
+		
 	}
 
 	public List<Person> findAllPersonOfDateRegistration() {

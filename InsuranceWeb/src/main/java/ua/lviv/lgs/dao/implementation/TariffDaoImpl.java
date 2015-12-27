@@ -45,7 +45,7 @@ public class TariffDaoImpl implements TariffDao {
 
 	@Transactional
 	public Tariff findTariffById(int id) {
-		return em.createQuery("from Tariff where id like :id", Tariff.class).setParameter("id", id).getSingleResult();
+		return em.find(Tariff.class, id);
 	}
 
 }

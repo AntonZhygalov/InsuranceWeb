@@ -27,9 +27,9 @@ public class InsuranceAmountDaoImpl implements InsuranceAmountDao {
 	}
 
 	@Transactional
-	public List<InsuranceAmountDao> findAllInsuranceAmount() {
+	public List<InsuranceAmount> findAllInsuranceAmount() {
 
-		return em.createQuery("from InsuranceAmount", InsuranceAmountDao.class).getResultList();
+		return em.createQuery("from InsuranceAmount", InsuranceAmount.class).getResultList();
 	}
 
 	@Transactional
@@ -39,9 +39,8 @@ public class InsuranceAmountDaoImpl implements InsuranceAmountDao {
 	}
 
 	@Transactional
-	public InsuranceAmountDao findInsuranceAmountById(int id) {
-		return em.createQuery("from InsuranceAmount where id like :id", InsuranceAmountDao.class).setParameter("id", id)
-				.getSingleResult();
+	public InsuranceAmount findInsuranceAmountById(int id) {
+		return em.find(InsuranceAmount.class, id);
 	}
 
 	

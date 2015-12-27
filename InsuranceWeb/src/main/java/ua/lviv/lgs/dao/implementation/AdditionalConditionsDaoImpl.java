@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.lviv.lgs.dao.AdditionalConditionsDao;
 import ua.lviv.lgs.entity.AdditionalConditions;
 
+
 @Repository
 public class AdditionalConditionsDaoImpl implements AdditionalConditionsDao {
 	@PersistenceContext(unitName = "Primary")
@@ -40,8 +41,7 @@ public class AdditionalConditionsDaoImpl implements AdditionalConditionsDao {
 
 	@Transactional
 	public AdditionalConditions findAdditionalConditionsById(int id) {
-		return em.createQuery("from AdditionalConditions where id like :id", AdditionalConditions.class)
-				.setParameter("id", id).getSingleResult();
+		return em.find(AdditionalConditions.class, id);
 	}
 
 }

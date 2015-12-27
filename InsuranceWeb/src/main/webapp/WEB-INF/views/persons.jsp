@@ -14,18 +14,34 @@
 			<tr>
 				<th>Name</th>
 				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
+				<th>Country</th>
 			</tr>
 		</thead>
 		<tbody>
 		<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
-			<c:forEach var="author" items="${authors}">
+			<c:forEach var="person" items="${persons}">
 				<tr>
-					<td>${author.name}</td>
-					<td>${author.country}</td>
+					<td>${person.id}</td>
+					<td>${person.fNamelName}</td>
+					<td>${person.number}</td>
+					<td>${person.passportSeries}</td>
+					<td>${person.passportNumber}</td>
+					<td>${person.identification}</td>
+					<td>${person.addres}</td>
+					<td>${person.dateOfRegistration}</td>
+					<td>${person.dateOfBirsthday}</td>
+					
+					
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="createNewAuthor">Create Author</a>
+	<a href="createNewPerson">Create Author</a>
 </body>
 </html>

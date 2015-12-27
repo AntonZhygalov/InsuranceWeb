@@ -11,7 +11,7 @@ public interface InsuranceAmountDao {
 
 	void updateInsuranceAmount(InsuranceAmount insuranceAmount);
 
-	InsuranceAmountDao findInsuranceAmountById(int id);
+	InsuranceAmount findInsuranceAmountById(int id);
 
-	List<InsuranceAmountDao> findAllInsuranceAmount();
+	List<InsuranceAmount> findAllInsuranceAmount();
 }

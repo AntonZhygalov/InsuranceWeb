@@ -41,8 +41,7 @@ public class FranchiseDaoImpl implements FranchiseDao {
 	@Transactional
 	public Franchise findFranchiseById(int id) {
 
-		return em.createQuery("from Franchise where id like :id", Franchise.class).setParameter("id", id)
-				.getSingleResult();
+		return em.find(Franchise.class, id);
 	}
 
 }

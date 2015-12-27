@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h2>Hello</h2>
-	<a href="showAllAuthors">Show Authors</a>
+	<a href="showAllPersons">Show Authors</a>
 </body>
 </html>

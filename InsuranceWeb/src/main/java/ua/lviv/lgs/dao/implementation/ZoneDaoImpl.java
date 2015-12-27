@@ -44,7 +44,7 @@ public class ZoneDaoImpl implements ZoneDao {
 
 	@Transactional
 	public Zone findZoneById(int id) {
-		return em.createQuery("from Zone where id like :id", Zone.class).setParameter("id", id).getSingleResult();
+		return em.find(Zone.class, id);
 	}
 
 }

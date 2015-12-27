@@ -45,7 +45,7 @@ public class ProgramDaoImpl implements ProgramDao {
 	@Transactional
 	public Program findProgramById(int id) {
 		
-		return em.createQuery("from Program where id like :id", Program.class).setParameter("id", id).getSingleResult();
+		return em.find(Program.class, id);
 	}
 
 }
