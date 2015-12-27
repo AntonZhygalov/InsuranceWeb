@@ -35,7 +35,7 @@ public class PersonController {
 	}
 
 	@RequestMapping(value = "/createNewPersons")
-	public String createPersonPage() {
+	public String createPersonPage(@RequestParam(value = "name") String name) {
 		return "newPerson";
 	}
 

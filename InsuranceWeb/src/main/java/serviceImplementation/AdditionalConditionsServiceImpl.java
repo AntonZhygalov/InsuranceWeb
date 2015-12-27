@@ -25,7 +25,6 @@ private AdditionalConditionsDaoImpl additionalConditions;
 
 	public void updateAdditionalConditions(
 			String IdAdditionalConditions) {
-	
 
 	}
 

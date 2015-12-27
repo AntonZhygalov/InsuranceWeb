@@ -7,15 +7,16 @@ import java.util.List;
 import ua.lviv.lgs.entity.Person;
 
 public interface PersonService {
-	void savePerson(String fNamelName, int number, String passportSeries,
-			String passportNumber, String identification, String addres,
-			Date dateOfRegistration, Calendar dateOfBirsthday);
+	void savePerson(String fNamelName, String number, String passportSeries, String passportNumber,
+			String identification, String addres, String yearOfBirstday,String mounthOfBirstday,String dayOfBirstday);
 
-	void removePerson(int id);
+	void removePerson(String id);
 
-	void updatePerson(String idPerson);
+	void updatePerson(String fNamelName, String number, String passportSeries, String passportNumber,
+			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
+			String dayOfBirstday);
 
-	Person findPersonById(int id);
+	Person findPersonById(String id);
 
 	List<Person> findAllPerson();
 	
