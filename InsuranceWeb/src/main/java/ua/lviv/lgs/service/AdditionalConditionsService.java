@@ -9,7 +9,7 @@ public interface AdditionalConditionsService {
 
 	void removeAdditionalConditions(String additionalConditions);
 	
-	void updateAdditionalConditions(AdditionalConditions additionalConditions);
+	void updateAdditionalConditions(String IdAdditionalConditions);
 	
 	AdditionalConditions findAdditionalConditionsById (int id);
 

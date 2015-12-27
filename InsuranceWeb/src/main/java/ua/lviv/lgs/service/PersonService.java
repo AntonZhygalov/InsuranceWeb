@@ -13,7 +13,7 @@ public interface PersonService {
 
 	void removePerson(int id);
 
-	void updatePerson(Person person);
+	void updatePerson(String idPerson);
 
 	Person findPersonById(int id);
 
