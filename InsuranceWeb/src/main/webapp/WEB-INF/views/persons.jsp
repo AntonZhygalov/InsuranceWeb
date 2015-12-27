@@ -42,6 +42,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="createNewPerson">Create Author</a>
+	<a href="createNewPersons">Create Person</a>
+	<a href="removePerson">Remove Person</a>
 </body>
 </html>
