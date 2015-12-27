@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Hello</h2>
-	<a href="showAllPersons">Show Authors</a>
+	<h2>Insurance</h2>
+	<a href="showAllPersons">Show Persons</a>
 </body>
 </html>
