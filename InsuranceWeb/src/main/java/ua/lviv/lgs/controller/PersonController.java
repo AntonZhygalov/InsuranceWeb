@@ -28,24 +28,24 @@ public class PersonController {
 	public String getPersons(Model model) {
 		List<Person> allPersons = personService.findAllPerson();
 		model.addAttribute("persons", allPersons);
-		// Методи контролера повертають стрічку, яка являє собою ім'я веб
-		// сторінки, яка повинна відкритись. Саме до цієї стрічки дописується
-		// префікс і суфікс.
-		return "persons";
+		return "persons-all";
 	}
-
 	@RequestMapping(value = "/createNewPersons")
+	public String createPersonPage(){
+		return "persons-new";
+	}
+	@RequestMapping(value = "/showAllPersons", method = RequestMethod.POST)
 	public String createPerson(@RequestParam(value = "fNamelName")  String fNamelName,@RequestParam(value = "number") String number,@RequestParam(value = "passportSeries") String passportSeries, @RequestParam(value = "passportNumber")String passportNumber,
 			@RequestParam(value = "identification")String identification,@RequestParam(value = "addres") String addres, @RequestParam(value = "yearOfBirstday")String yearOfBirstday, @RequestParam(value = "mounthOfBirstday")String mounthOfBirstday,
 			@RequestParam(value = "dayOfBirstday")String dayOfBirstday) {
 		personService.savePerson(fNamelName, number, passportSeries, passportNumber, identification, addres, yearOfBirstday, mounthOfBirstday, dayOfBirstday);
 		return "redirect:/showAllPersons";
 	}
-	@RequestMapping(value = "/removePerson")
-	public String removePerson(@RequestParam(value = "number") String number) {
-		personService.removePerson(number);
-		return "redirect:/showAllPersons";
-	}
+//	@RequestMapping(value = "/removePerson")
+//	public String removePerson(@RequestParam(value = "number") String number) {
+//		personService.removePerson(number);
+//		return "redirect:/showAllPersons";
+//	}
 
 //	//@RequestParam отримує вхідне (введене) значення з веб сторінки, використовуючи ім'я input тегу.
 //	@RequestMapping(value = "/showAllPersons", method = RequestMethod.POST)

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Authors: </h2>
+<h2>Persons: </h2>
 	<table>
 		<thead>
 			<tr>
@@ -28,16 +28,15 @@
 			<c:forEach var="person" items="${persons}">
 				<tr>
 					<td>${person.id}</td>
-					<td>${person.fNamelName}</td>
-					<td>${person.number}</td>
-					<td>${person.passportSeries}</td>
-					<td>${person.passportNumber}</td>
-					<td>${person.identification}</td>
 					<td>${person.addres}</td>
-					<td>${person.dateOfRegistration}</td>
 					<td>${person.dateOfBirsthday}</td>
-					
-					
+					<td>${person.dateOfRegistration}</td>
+					<td>${person.fNamelName}</td>
+					<td>${person.identification}</td>
+					<td>${person.number}</td>
+					<td>${person.passportNumber}</td>
+					<td>${person.passportSeries}</td>
+
 				</tr>
 			</c:forEach>
 		</tbody>

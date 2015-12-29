@@ -3,24 +3,35 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-						http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+						http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+						http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
 						http://www.springframework.org/schema/context 
 						http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 	<!-- Імпортування appContext.xml в цей документ, що робить servlet-context.xml 
 		головним context xml документом -->
 	<import resource="classpath:/META-INF/context.xml" />
 
-	<!-- InternalResourceViewResolver додасть префікс і суфікс до стрічок, які 
-		повертаються з методів контролера, та відкриє вказану веб сторінку -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<!-- Префікс відповідає за базове розташування (головну папку) веб сторінок -->
-			<value>/WEB-INF/views/</value>
-		</property>
-		<property name="suffix">
-			<!-- СУфікс відповідає за розширення веб сторінок -->
-			<value>.jsp</value>
+	<!-- Для того, щоб використовувати tiles, використовуються відповідні два 
+		bean`и -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.tiles3.TilesView</value>
 		</property>
 	</bean>
+
+	<!-- tilesConfigurer посилається на конфігураційну tiles.xml -->
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Наступні теги необхідні для того, щоб Spring MVC дозволив використання локальних ресурсів (css, js та img файлів) -->
+	<!-- <mvc:annotation-driven></mvc:annotation-driven> -->
+	<!-- <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources> -->
 </beans>

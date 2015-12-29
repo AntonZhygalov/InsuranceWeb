@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<!-- tiles definition - опис атрибутів веб сторінок -->
+<tiles-definitions>
+	<!-- Спочатку описується базовий шаблонний definition з набором атрибутів 
+		(наприклад статичні header та footer і динамічний body). Веб сторінка, яка 
+		буде головним шаблоном та на якій будуть збиратись в один ці всі атрибути 
+		- layout.jsp -->
+	<definition name="base.definition" template="/views/tiles/layout.jsp">
+		<put-attribute name="header" value="/views/tiles/header.jsp"></put-attribute>
+		<put-attribute name="footer" value="/views/tiles/footer.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+	<!-- Нижче описано нераціональне використання tiles definition. Definition 
+		name - це стрічка, яка повертається з методів контролерів. -->
+	<!-- <definition name="authors" extends="base.definition"> -->
+	<!-- <put-attribute name="body" value="/views/authors.jsp"></put-attribute> -->
+	<!-- <put-attribute name="title" value="Authors"></put-attribute> -->
+	<!-- </definition> -->
+
+	<!-- <definition name="newAuthor" extends="base.definition"> -->
+	<!-- <put-attribute name="body" value="/views/newAuthor.jsp"></put-attribute> -->
+	<!-- <put-attribute name="title" value="New Author Page"></put-attribute> -->
+	<!-- </definition> -->
+
+	<!-- Нижче описано definition, який буде будувати усі веб сторінки, пов'язані 
+		з автором, оскільки в назві definition'а прописано, що він реагуватиме на 
+		стічки author-<будь-що> -->
+	<definition name="persons-*" extends="base.definition">
+	<!-- {1} - те, що приходитиме замість * (в нашому випадку, all i new) -->
+		<put-attribute name="body" value="/views/person/{1}.jsp"></put-attribute>
+		<put-attribute name="title" value="Person {1}"></put-attribute>
+	</definition>
+</tiles-definitions>
