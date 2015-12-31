@@ -8,34 +8,43 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Persons: </h2>
+	<h2>Persons:</h2>
 	<table>
 		<thead>
 			<tr>
+				<th>Id</th>
+				<th>number</th>
 				<th>Name</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
-				<th>Country</th>
+				<th>addres</th>
+				<th>day registration</th>
+				<th>mounts registration</th>
+				<th>yeat registration</th>
+				<th>day birthday</th>
+				<th>mounts birthday</th>
+				<th>yeat birthday</th>
+				<th>identification</th>
+				<th>serial of passport</th>
+				<th>number of passport</th>
 			</tr>
 		</thead>
 		<tbody>
-		<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+			<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
 			<c:forEach var="person" items="${persons}">
 				<tr>
 					<td>${person.id}</td>
-					<td>${person.addres}</td>
-					<td>${person.dateOfBirsthday}</td>
-					<td>${person.dateOfRegistration}</td>
-					<td>${person.fNamelName}</td>
-					<td>${person.identification}</td>
 					<td>${person.number}</td>
-					<td>${person.passportNumber}</td>
+					<td>${person.fNamelName}</td>
+					<td>${person.addres}</td>
+					<td>${person.dayOfregistration}</td>
+					<td>${person.mountsOfregistration}</td>
+					<td>${person.yearOfregistration}</td>
+					<td>${person.dayOfBirthday}</td>
+					<td>${person.mountsOfBirthday}</td>
+					<td>${person.yearOfBirthday}</td>
+					<td>${person.identification}</td>
 					<td>${person.passportSeries}</td>
+					<td>${person.passportNumber}</td>
+					
 
 				</tr>
 			</c:forEach>

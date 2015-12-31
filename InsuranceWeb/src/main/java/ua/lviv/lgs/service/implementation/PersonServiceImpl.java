@@ -52,6 +52,7 @@ public class PersonServiceImpl implements PersonService {
 		return personDao.findPersonById(Integer.parseInt(id));
 		
 	}
+ 
 @Transactional
 	public List<Person> findAllPerson() {
 		return personDao.findAllPerson();

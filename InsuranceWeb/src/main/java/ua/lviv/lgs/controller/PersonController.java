@@ -1,5 +1,7 @@
 package ua.lviv.lgs.controller;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import ua.lviv.lgs.DTO.PersonDTO;
+import ua.lviv.lgs.DTO.PersonToShow;
 import ua.lviv.lgs.entity.Person;
 import ua.lviv.lgs.service.PersonService;
 
@@ -26,8 +30,53 @@ public class PersonController {
 	// За замовчуванням HTTP методом є GET.
 	@RequestMapping(value = "/showAllPersons")
 	public String getPersons(Model model) {
-		List<Person> allPersons = personService.findAllPerson();
-		model.addAttribute("persons", allPersons);
+
+	
+	
+	
+	
+	
+	
+	
+	
+	List<PersonToShow> persons = new ArrayList<PersonToShow>();
+    List<Person> listPersons =  personService.findAllPerson();
+	for (int i=0;i<listPersons.size();i++) {
+		Person person = listPersons.get(i);
+		PersonToShow newperson = new PersonToShow();
+		newperson.setfNamelName(person.getfNamelName());
+		newperson.setAddres(person.getAddres());
+		newperson.setTariff(person.getTariff());
+		newperson.setIdentification(person.getIdentification());
+		newperson.setPassportNumber(person.getPassportNumber());
+		newperson.setPassportSeries(person.getPassportSeries());
+		newperson.setId(person.getId());
+		newperson.setNumber(person.getNumber());
+		
+		newperson.setDayOfBirthday(person.getDateOfBirsthday().get(2));
+		newperson.setMountsOfBirthday(person.getDateOfBirsthday().get(1));
+		newperson.setYearOfBirthday(person.getDateOfBirsthday().get(0));
+
+		newperson.setDayOfregistration(person.getDateOfRegistration().getDay());
+		newperson.setMountsOfregistration(person.getDateOfRegistration().getMonth());
+		newperson.setYearOfregistration(person.getDateOfRegistration().getYear());
+		persons.add(newperson);
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		model.addAttribute("persons", persons);
 		return "persons-all";
 	}
 	@RequestMapping(value = "/createNewPersons")
