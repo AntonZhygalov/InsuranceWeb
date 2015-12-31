@@ -7,17 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="showAllPersons" method="post">
+	<form action="insert" method="post">
 		<h2>Input Data</h2>
-		number <input type="text" name="number">
-		full name <input type="text" name="fNamelName"> 
-		passportSeries <input type="text" name="passportSeries">
-		passportNumber <input type="text" name="passportNumber">
-		identification <input type="text" name="identification">
-		addres <input type="text" name="addres">
-		yearOfBirstday <input type="text" name="yearOfBirstday">
-		mounthOfBirstday <input type="text" name="mounthOfBirstday">
-		dayOfBirstday <input type="text" name="dayOfBirstday">	
+		number <input type="text" name="number"> full name <input
+			type="text" name="fNamelName"> passportSeries <input
+			type="text" name="passportSeries"> passportNumber <input
+			type="text" name="passportNumber"> identification <input
+			type="text" name="identification"> addres <input type="text"
+			name="addres"> yearOfBirstday <input type="text"
+			name="yearOfBirstday"> mounthOfBirstday <input type="text"
+			name="mounthOfBirstday"> dayOfBirstday <input type="text"
+			name="dayOfBirstday">
 		<button type="submit">Submit</button>
 	</form>
 </body>

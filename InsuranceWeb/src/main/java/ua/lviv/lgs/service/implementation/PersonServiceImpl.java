@@ -8,6 +8,7 @@ import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ua.lviv.lgs.dao.PersonDao;
 import ua.lviv.lgs.entity.Person;
@@ -18,7 +19,7 @@ import ua.lviv.lgs.service.PersonService;
 public class PersonServiceImpl implements PersonService {
 	@Autowired
 	PersonDao personDao;
-
+@Transactional
 	public void savePerson(String fNamelName, String number, String passportSeries, String passportNumber,
 			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
 			String dayOfBirstday) {
@@ -27,12 +28,12 @@ public class PersonServiceImpl implements PersonService {
 				identification, addres, new Date(), new GregorianCalendar(Integer.parseInt(yearOfBirstday),
 						Integer.parseInt(mounthOfBirstday), Integer.parseInt(dayOfBirstday))));
 	}
-
+@Transactional
 	public void removePerson(String id) {
 		personDao.removePerson(personDao.findPersonById(Integer.parseInt(id)));
 
 	}
-
+@Transactional
 	public void updatePerson(String fNamelName, String number, String passportSeries, String passportNumber,
 			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
 			String dayOfBirstday) {
@@ -46,17 +47,17 @@ public class PersonServiceImpl implements PersonService {
 				Integer.parseInt(mounthOfBirstday), Integer.parseInt(dayOfBirstday)));
 		personDao.updatePerson(person);
 	}
-
+@Transactional
 	public Person findPersonById(String id) {
-		personDao.findPersonById(Integer.parseInt(id));
-		return null;
+		return personDao.findPersonById(Integer.parseInt(id));
+		
 	}
-
+@Transactional
 	public List<Person> findAllPerson() {
-		personDao.findAllPerson();
-		return null;
+		return personDao.findAllPerson();
+		 
 	}
-
+@Transactional
 	public List<Person> findAllPersonOfDateRegistration() {
 
 		return personDao.findAllPerson();

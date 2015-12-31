@@ -31,21 +31,26 @@ public class PersonController {
 		return "persons-all";
 	}
 	@RequestMapping(value = "/createNewPersons")
-	public String createPersonPage(){
+	public String createPersonPageNewPerson(){
 		return "persons-new";
 	}
-	@RequestMapping(value = "/showAllPersons", method = RequestMethod.POST)
+	
+	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	public String createPerson(@RequestParam(value = "fNamelName")  String fNamelName,@RequestParam(value = "number") String number,@RequestParam(value = "passportSeries") String passportSeries, @RequestParam(value = "passportNumber")String passportNumber,
 			@RequestParam(value = "identification")String identification,@RequestParam(value = "addres") String addres, @RequestParam(value = "yearOfBirstday")String yearOfBirstday, @RequestParam(value = "mounthOfBirstday")String mounthOfBirstday,
 			@RequestParam(value = "dayOfBirstday")String dayOfBirstday) {
 		personService.savePerson(fNamelName, number, passportSeries, passportNumber, identification, addres, yearOfBirstday, mounthOfBirstday, dayOfBirstday);
 		return "redirect:/showAllPersons";
 	}
-//	@RequestMapping(value = "/removePerson")
-//	public String removePerson(@RequestParam(value = "number") String number) {
-//		personService.removePerson(number);
-//		return "redirect:/showAllPersons";
-//	}
+	@RequestMapping(value = "/removePerson")
+	public String createPersonPageRemovePerson(){
+		return "persons-remove";
+	}
+	@RequestMapping(value = "/insertRemovePerson")
+	public String removePerson(@RequestParam(value = "number") String number) {
+		personService.removePerson(number);
+		return "redirect:/showAllPersons";
+	}
 
 //	//@RequestParam отримує вхідне (введене) значення з веб сторінки, використовуючи ім'я input тегу.
 //	@RequestMapping(value = "/showAllPersons", method = RequestMethod.POST)
