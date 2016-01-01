@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import ua.lviv.lgs.DTO.PersonToShow;
 import ua.lviv.lgs.entity.Person;
 
 public interface PersonService {
@@ -18,7 +19,7 @@ public interface PersonService {
 
 	Person findPersonById(String id);
 
-	List<Person> findAllPerson();
+	List<PersonToShow> findAllPerson();
 	
 	List<Person> findAllPersonOfDateRegistration();
 }

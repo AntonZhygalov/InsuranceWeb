@@ -11,17 +11,13 @@
 	<h2>Persons:</h2>
 	<table>
 		<thead>
-			<tr>
+			<tr >
 				<th>Id</th>
 				<th>number</th>
 				<th>Name</th>
 				<th>addres</th>
-				<th>day registration</th>
-				<th>mounts registration</th>
-				<th>yeat registration</th>
-				<th>day birthday</th>
-				<th>mounts birthday</th>
-				<th>yeat birthday</th>
+				<th>date registration</th>
+				<th>date birthday</th>				
 				<th>identification</th>
 				<th>serial of passport</th>
 				<th>number of passport</th>
@@ -36,11 +32,7 @@
 					<td>${person.fNamelName}</td>
 					<td>${person.addres}</td>
 					<td>${person.dayOfregistration}</td>
-					<td>${person.mountsOfregistration}</td>
-					<td>${person.yearOfregistration}</td>
 					<td>${person.dayOfBirthday}</td>
-					<td>${person.mountsOfBirthday}</td>
-					<td>${person.yearOfBirthday}</td>
 					<td>${person.identification}</td>
 					<td>${person.passportSeries}</td>
 					<td>${person.passportNumber}</td>

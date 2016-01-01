@@ -1,5 +1,6 @@
 package ua.lviv.lgs.service.implementation;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import ua.lviv.lgs.DTO.PersonToShow;
 import ua.lviv.lgs.dao.PersonDao;
 import ua.lviv.lgs.entity.Person;
 import ua.lviv.lgs.service.PersonService;
@@ -54,8 +56,25 @@ public class PersonServiceImpl implements PersonService {
 	}
  
 @Transactional
-	public List<Person> findAllPerson() {
-		return personDao.findAllPerson();
+	public List<PersonToShow> findAllPerson() {
+	List<PersonToShow> persons = new ArrayList<PersonToShow>();
+	List<Person> listPersons = personDao.findAllPerson();
+	for (int i = 0; i < listPersons.size(); i++) {
+		Person person = listPersons.get(i);
+		PersonToShow newperson = new PersonToShow();
+		newperson.setfNamelName(person.getfNamelName());
+		newperson.setAddres(person.getAddres());
+		newperson.setTariff(person.getTariff());
+		newperson.setIdentification(person.getIdentification());
+		newperson.setPassportNumber(person.getPassportNumber());
+		newperson.setPassportSeries(person.getPassportSeries());
+		newperson.setId(person.getId());
+		newperson.setNumber(person.getNumber());
+		newperson.setDayOfBirthday(person.getDateOfBirsthday().get(1)+" - "+person.getDateOfBirsthday().get(2)+" - "+person.getDateOfBirsthday().get(0));
+		newperson.setDayOfregistration(person.getDateOfRegistration().toString());
+		persons.add(newperson);
+	}
+		return persons;
 		 
 	}
 @Transactional

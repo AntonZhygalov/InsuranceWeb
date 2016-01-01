@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Insurance</h2>
-	<a href="showAllPersons">Show Persons</a>
-	<a href="showAllTariff">Show Tariff</a>
+<!-- You may use form if you want to send some data to server. Action - URL which will be created when the button in pressed -->
+	<form action="insertRemoveTariff" method="post">
+		<h2>Input Data</h2>
+		number <input type="text" name="Id">
+		<button type="submit">Submit</button>
+	</form>
 </body>
 </html>

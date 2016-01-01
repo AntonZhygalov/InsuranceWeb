@@ -35,4 +35,9 @@
 		<put-attribute name="body" value="/views/person/{1}.jsp"></put-attribute>
 		<put-attribute name="title" value="Person {1}"></put-attribute>
 	</definition>
+	<definition name="tariff-*" extends="base.definition">
+	<!-- {1} - те, що приходитиме замість * (в нашому випадку, all i new) -->
+		<put-attribute name="body" value="/views/tariff/{1}.jsp"></put-attribute>
+		<put-attribute name="title" value="Tariff {1}"></put-attribute>
+	</definition>
 </tiles-definitions>

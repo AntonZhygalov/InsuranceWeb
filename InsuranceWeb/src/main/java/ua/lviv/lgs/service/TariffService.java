@@ -5,7 +5,7 @@ import java.util.List;
 import ua.lviv.lgs.entity.Tariff;
 
 public interface TariffService {
-	void saveTariff(String tariff);
+	void saveTariff(String limitDay, String fromDay,String fromMonth,String fromYear);
 
 	void removeTariff(String tariff);
 
