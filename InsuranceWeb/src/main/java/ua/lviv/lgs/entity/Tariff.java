@@ -43,21 +43,11 @@ public class Tariff {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Tariff(int limitDay, Calendar fromDate, Calendar untilDate, int cost) {
-		super();
-		this.limitDay = limitDay;
-		this.fromDate = fromDate;
-		this.untilDate = untilDate;
-		this.cost = cost;
-	}
-
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 
 	public Program getProgram() {
 		return program;

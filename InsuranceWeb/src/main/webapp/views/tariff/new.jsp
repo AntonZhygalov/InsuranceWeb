@@ -7,21 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="insertTafiff" >
+	<form action="insertTafiff" method="post" >
 		<h2>Input Data</h2>
-		number <input type="text" name="program"> program 
-		<input type="text" name="franchise"> franchise 
-		<input type="text" name="zone"> zone 
-		<input type="text" name="additionalConditions"> additionalConditions 
-		<input type="text" name="insuranceAmount"> insuranceAmount
-		<input type="text" name="limitDay"> limitDay
-		<input type="text" name="fromDay"> fromDay
-		<input type="text" name="fromMonth"> fromMonth
-		<input type="text" name="fromYear"> fromYear
-		<input type="text" name="untilDate"> untilDate
-		<input type="text" name="cost">cost
-		<input type="text" name="person">person
+		program <input type="text" name="program"> 
+		franchise <input type="text" name="franchise"> 
+		zone <input type="text" name="zone"> 
+		additionalConditions <input type="text" name="additionalConditions">  
+		insuranceAmount <input type="text" name="insuranceAmount"> 
+		limitDay <input type="text" name="limitDay"> 
+		fromDay <input type="text" name="fromDay"> 
+		fromMonth <input type="text" name="fromMonth"> 
+		fromYear <input type="text" name="fromYear"> 
+		person <input type="text" name="person">
 		<button type="submit">Submit</button>
 	</form>
+	
+	
+	
 </body>
 </html>
