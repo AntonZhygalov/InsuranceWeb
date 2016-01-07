@@ -9,8 +9,7 @@ import ua.lviv.lgs.entity.Tariff;
 import ua.lviv.lgs.entity.Zone;
 
 public interface TariffService {
-	void saveTariff(String program, String franchise,String zone,String additionalConditions,
-			String insuranceAmount,String limitDay,String fromDay,String fromMounth,String fromYear,String person);
+	void saveTariff(String limitDay, String fromDay, String fromMonth, String fromYear,String person,String program,String franchise,String zone,String additionalConditions,String insuranceAmount);
 
 	void removeTariff(String tariff);
 

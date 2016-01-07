@@ -10,9 +10,9 @@ public interface InsuranceAmountService {
 
 	void removeInsuranceAmount(String insuranceAmount);
 
-	void updateInsuranceAmount(InsuranceAmount insuranceAmount);
+	void updateInsuranceAmount(String insuranceAmount);
 
-	InsuranceAmountDao findInsuranceAmountById(int id);
+	InsuranceAmount findInsuranceAmountById(int id);
 
-	List<InsuranceAmountDao> findAllInsuranceAmount();
+	List<InsuranceAmount> findAllInsuranceAmount();
 }

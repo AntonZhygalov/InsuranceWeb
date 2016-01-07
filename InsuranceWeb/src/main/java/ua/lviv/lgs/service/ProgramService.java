@@ -10,7 +10,7 @@ public interface ProgramService {
 
 	void removeProgram(String program);
 	
-	void updateProgram(Program program);
+	void updateProgram(String program);
 
 	Program findProgramById(int id);
 

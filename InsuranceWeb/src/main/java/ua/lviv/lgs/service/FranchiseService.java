@@ -9,7 +9,7 @@ public interface FranchiseService {
 
 	void removeFranchise(String franchise);
 
-	void updateFranchise(Franchise franchise);
+	void updateFranchise(String franchise);
 
 	Franchise findFranchiseById(int id);
 

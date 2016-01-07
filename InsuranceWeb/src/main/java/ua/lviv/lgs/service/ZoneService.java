@@ -9,7 +9,7 @@ public interface ZoneService {
 
 	void removeZone(String zone);
 
-	void updateZone(Zone zone);
+	void updateZone(String zone);
 
 	Zone findZoneById(int id);
 
