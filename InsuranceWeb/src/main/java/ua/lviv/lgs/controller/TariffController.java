@@ -86,7 +86,7 @@ public class TariffController {
 	}
 
 	@RequestMapping(value = "/insertRemoveTariff")
-	public String removePerson(@RequestParam(value = "number") String number) {
+	public String removePerson(@RequestParam(value = "Id") String number) {
 		tariffService.removeTariff(number);
 		return "redirect:/showAllTariff";
 	}

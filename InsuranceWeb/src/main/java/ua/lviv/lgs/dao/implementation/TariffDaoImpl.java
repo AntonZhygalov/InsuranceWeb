@@ -26,14 +26,11 @@ public class TariffDaoImpl implements TariffDao {
 
 	@Transactional
 	public void removeTariff(Tariff tariff) {
-
 		em.remove(tariff);
-
 	}
 
 	@Transactional
 	public List<Tariff> findAllTariff() {
-
 		return em.createQuery("from Tariff", Tariff.class).getResultList();
 	}
 

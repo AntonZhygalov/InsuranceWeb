@@ -11,18 +11,18 @@
 	<h2>Tariffs:</h2>
 	<table>
 		<thead>
-			<tr >
+			<tr>
 				<th>Id</th>
 				<th>program</th>
 				<th>franchise</th>
 				<th>zone</th>
 				<th>additionalConditions</th>
-				<th>insuranceAmount</th>				
+				<th>insuranceAmount</th>
 				<th>limitDay</th>
 				<th>fromDate</th>
 				<th>untilDate</th>
 				<th>cost</th>
-				<th>person</th>				
+				<th>person</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -39,7 +39,7 @@
 					<td>${tariff.fromDate}</td>
 					<td>${tariff.untilDate}</td>
 					<td>${tariff.cost}</td>
-					<td>${tariff.person}</td>
+					<td>${tariff.personId}</td>
 
 				</tr>
 			</c:forEach>

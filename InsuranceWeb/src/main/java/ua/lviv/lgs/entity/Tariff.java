@@ -40,7 +40,7 @@ public class Tariff {
 	private List<Person> person;
 
 	public Tariff() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public int getId() {
