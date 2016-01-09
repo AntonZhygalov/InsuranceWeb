@@ -21,7 +21,7 @@
 		</c:forEach>
 		franchise
 		<a:forEach var="franchise" items="${franchises}">
-			<input type="radio" name="franchise" value="${franchise.id}">${franchise.franchise}
+			<input type="radio" name="franchise" value="${franchise.id}">${franchise.sumFranchise}
 		</a:forEach>
 		zone
 		<s:forEach var="zone" items="${zones}">
@@ -29,13 +29,13 @@
 		</s:forEach> 
 		additionalConditions
 		<z:forEach var="additionalConditions"
-			items="${additionalConditionses}">
-			<input type="radio" name="additionalConditions" value="${zone.id}">${additionalConditions.additionalConditions}
+			items="${additionalConditions}">
+			<input type="radio" name="additionalConditions" value="${additionalConditions.id}">${additionalConditions.additionalConditions}
 		</z:forEach>
 		insuranceAmount
 		<x:forEach var="insuranceAmount" items="${insuranceAmounts}">
 			<input type="radio" name="insuranceAmount"
-				value="${insuranceAmount.id}">${insuranceAmount.insuranceAmount}
+				value="${insuranceAmount.id}">${insuranceAmount.sumInsurance}
 		</x:forEach>
 		<!-- 
 		franchise <input type="text" name="franchise"> 

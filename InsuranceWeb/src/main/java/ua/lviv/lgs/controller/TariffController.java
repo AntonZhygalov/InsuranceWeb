@@ -54,7 +54,7 @@ public class TariffController {
 		List<Zone>zones=zoneService.findAllZone();
 		model.addAttribute("programs",programs);
 		model.addAttribute("additionalConditions",additionalConditions);
-		model.addAttribute("framchises",franchises);
+		model.addAttribute("franchises",franchises);
 		model.addAttribute("insuranceAmounts", insuranceAmounts);
 		model.addAttribute("zones", zones);
 		return "tariff-new";
@@ -74,7 +74,9 @@ public class TariffController {
 			@RequestParam(value = "person") String  person
 			
 			) {
+		System.out.println("1");
 		tariffService.saveTariff(limitDay, fromDay, fromMonth, fromYear,person,program,franchise,zone,additionalConditions,insuranceAmount);
+		System.out.println("2");
 		return "redirect:/showAllTariff";
 	}
 

@@ -8,19 +8,23 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ua.lviv.lgs.dao.ZoneDao;
 import ua.lviv.lgs.entity.Zone;
+import ua.lviv.lgs.service.ZoneService;
 
 @Service
-public class ZoneServiceImpl {
+public class ZoneServiceImpl implements ZoneService {
 	@Autowired
 	private ZoneDao zoneDao;
-@Transactional
+
+	@Transactional
 	public void saveZone(String zone) {
 		this.zoneDao.saveZone(new Zone(zone));
 	}
-@Transactional
+
+	@Transactional
 	public void removeZone(String zone) {
 		this.zoneDao.removeZone(new Zone(zone));
 	}
+
 	@Transactional
 	public void updateZone(String zone) {
 
@@ -28,10 +32,12 @@ public class ZoneServiceImpl {
 		zona.setZone(zone);
 		zoneDao.updateZone(zona);
 	}
+
 	@Transactional
 	public Zone findZoneById(int id) {
 		return zoneDao.findZoneById(id);
 	}
+
 	@Transactional
 	public List<Zone> findAllZone() {
 		return zoneDao.findAllZone();
