@@ -5,6 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker({dateFormat: "yy-mm-dd"});
+   
+  });
+  </script>
 </head>
 <body>
 	<form action="insert" method="post">
@@ -15,10 +25,12 @@
 		 passportNumber <input type="text" name="passportNumber"> 
 		identification <input type="text" name="identification"> 
 		addres <input type="text"	name="addres"> 
-		yearOfBirstday <input type="text"	name="yearOfBirstday"> 
+		Date: <input type="text" id="datepicker" name = "dateOfBirthsday">
+		<!--yearOfBirstday <input type="text"	name="yearOfBirstday"> 
 		mounthOfBirstday <input type="text" name="mounthOfBirstday"> 
-		dayOfBirstday <input type="text" name="dayOfBirstday">
+		dayOfBirstday <input type="text" name="dayOfBirstday">-->
 		<button type="submit">Submit</button>
 	</form>
+	
 </body>
 </html>

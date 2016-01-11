@@ -21,7 +21,7 @@ public class PersonController {
 	private PersonService personService;
 
 	// Ця анотація мапує (створює bean) веб запиту на метод нижче, який обробляє
-	@SuppressWarnings("deprecation")
+
 	// цей запит. 2 головні параметри: URL i Http метод.
 	// За замовчуванням HTTP методом є GET.
 	@RequestMapping(value = "/showAllPersons")
@@ -42,11 +42,10 @@ public class PersonController {
 			@RequestParam(value = "passportNumber") String passportNumber,
 			@RequestParam(value = "identification") String identification,
 			@RequestParam(value = "addres") String addres,
-			@RequestParam(value = "yearOfBirstday") String yearOfBirstday,
-			@RequestParam(value = "mounthOfBirstday") String mounthOfBirstday,
-			@RequestParam(value = "dayOfBirstday") String dayOfBirstday) {
+			@RequestParam(value = "dateOfBirthsday") String dateOfBirthsday
+	) {
 		personService.savePerson(fNamelName, number, passportSeries, passportNumber, identification, addres,
-				yearOfBirstday, mounthOfBirstday, dayOfBirstday);
+				dateOfBirthsday);
 		return "redirect:/showAllPersons";
 	}
 

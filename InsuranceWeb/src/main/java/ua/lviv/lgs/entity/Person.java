@@ -37,7 +37,7 @@ public class Person {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dateOfRegistration;
 	@Temporal(TemporalType.DATE)
-	private Calendar dateOfBirsthday;
+	private Date dateOfBirsthday;
 	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
 	List<Tariff> tariff;
 
@@ -47,7 +47,7 @@ public class Person {
 
 	public Person(String fNamelName, int number, String passportSeries,
 			String passportNumber, String identification, String addres,
-			Date dateOfRegistration, Calendar dateOfBirsthday) {
+			Date dateOfRegistration, Date dateOfBirsthday) {
 		super();
 		this.fNamelName = fNamelName;
 		this.number = number;
@@ -83,11 +83,11 @@ public class Person {
 		this.dateOfRegistration = dateOfRegistration;
 	}
 
-	public Calendar getDateOfBirsthday() {
+	public Date getDateOfBirsthday() {
 		return dateOfBirsthday;
 	}
 
-	public void setDateOfBirsthday(Calendar dateOfBirsthday) {
+	public void setDateOfBirsthday(Date dateOfBirsthday) {
 		this.dateOfBirsthday = dateOfBirsthday;
 	}
 

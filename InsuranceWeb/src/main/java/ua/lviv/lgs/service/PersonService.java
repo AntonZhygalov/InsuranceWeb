@@ -9,13 +9,12 @@ import ua.lviv.lgs.entity.Person;
 
 public interface PersonService {
 	void savePerson(String fNamelName, String number, String passportSeries, String passportNumber,
-			String identification, String addres, String yearOfBirstday,String mounthOfBirstday,String dayOfBirstday);
+			String identification, String addres, String dateOfBirthsday);
 
 	void removePerson(String id);
 
 	void updatePerson(String fNamelName, String number, String passportSeries, String passportNumber,
-			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
-			String dayOfBirstday);
+			String identification, String addres, String dateOfBirthsday);
 
 	Person findPersonById(String id);
 

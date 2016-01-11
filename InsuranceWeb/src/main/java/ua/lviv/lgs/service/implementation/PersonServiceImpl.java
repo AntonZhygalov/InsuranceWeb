@@ -1,5 +1,8 @@
 package ua.lviv.lgs.service.implementation;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,32 +24,39 @@ import ua.lviv.lgs.service.PersonService;
 public class PersonServiceImpl implements PersonService {
 	@Autowired
 	PersonDao personDao;
+
 @Transactional
 	public void savePerson(String fNamelName, String number, String passportSeries, String passportNumber,
-			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
-			String dayOfBirstday) {
+			String identification, String addres, String dateOfBirthsday) {
 
+	DateFormat df = new SimpleDateFormat("yy-mm-dd");
+	Date startDate = null;
+	try {
+		startDate = df.parse(dateOfBirthsday);
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 		personDao.savePerson(new Person(fNamelName, Integer.parseInt(number), passportSeries, passportNumber,
-				identification, addres, new Date(), new GregorianCalendar(Integer.parseInt(yearOfBirstday),
-						Integer.parseInt(mounthOfBirstday), Integer.parseInt(dayOfBirstday))));
+				identification, addres, new Date(), startDate)
+				);
 	}
 @Transactional
 	public void removePerson(String id) {
 		personDao.removePerson(personDao.findPersonById(Integer.parseInt(id)));
 
 	}
+@SuppressWarnings("deprecation")
 @Transactional
 	public void updatePerson(String fNamelName, String number, String passportSeries, String passportNumber,
-			String identification, String addres, String yearOfBirstday, String mounthOfBirstday,
-			String dayOfBirstday) {
+			String identification, String addres, String dateOfBirthsday) {
 		Person person = findPersonById(number);
 		person.setfNamelName(fNamelName);
 		person.setAddres(addres);
 		person.setIdentification(identification);
 		person.setPassportNumber(passportNumber);
 		person.setPassportSeries(passportSeries);
-		person.setDateOfBirsthday(new GregorianCalendar(Integer.parseInt(yearOfBirstday),
-				Integer.parseInt(mounthOfBirstday), Integer.parseInt(dayOfBirstday)));
+		person.setDateOfBirsthday(new Date(dateOfBirthsday));
 		personDao.updatePerson(person);
 	}
 @Transactional
@@ -55,6 +65,7 @@ public class PersonServiceImpl implements PersonService {
 		
 	}
  
+
 @Transactional
 	public List<PersonToShow> findAllPerson() {
 	List<PersonToShow> persons = new ArrayList<PersonToShow>();
@@ -70,7 +81,7 @@ public class PersonServiceImpl implements PersonService {
 		newperson.setPassportSeries(person.getPassportSeries());
 		newperson.setId(person.getId());
 		newperson.setNumber(person.getNumber());
-		newperson.setDayOfBirthday(person.getDateOfBirsthday().get(1)+" - "+person.getDateOfBirsthday().get(2)+" - "+person.getDateOfBirsthday().get(0));
+		newperson.setDayOfBirthday(person.getDateOfBirsthday().toString());
 		newperson.setDayOfregistration(person.getDateOfRegistration().toString());
 		persons.add(newperson);
 	}

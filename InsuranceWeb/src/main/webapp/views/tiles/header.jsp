@@ -8,5 +8,7 @@
 </head>
 <body>
 <h2>HEADER</h2>
+<a href="showAllPersons">Show Persons</a>
+	<a href="showAllTariff">Show Tariff</a>
 </body>
 </html>
