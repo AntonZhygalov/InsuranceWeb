@@ -32,6 +32,6 @@
 	</bean>
 
 	<!-- Наступні теги необхідні для того, щоб Spring MVC дозволив використання локальних ресурсів (css, js та img файлів) -->
-	<!-- <mvc:annotation-driven></mvc:annotation-driven> -->
-	<!-- <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources> -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 </beans>

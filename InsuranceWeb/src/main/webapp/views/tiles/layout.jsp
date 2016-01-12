@@ -11,7 +11,7 @@
 <title><tiles:getAsString name="title"></tiles:getAsString></title>
 </head>
 <body>
-	<!-- Завдяки tiles:insertAttribute тегу в layout.jsp вставляються атрибути, описані на tiles.xml -->
+	
 	<div>
 		<tiles:insertAttribute name="header"></tiles:insertAttribute>
 	</div>
