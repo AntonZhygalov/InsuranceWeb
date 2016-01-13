@@ -20,15 +20,15 @@ public class Tariff {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private Program program;
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private Franchise franchise;
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private Zone zone;
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private AdditionalConditions additionalConditions;
-	@ManyToOne(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private InsuranceAmount insuranceAmount;
 	private int limitDay;
 	@Temporal(TemporalType.DATE)
@@ -36,7 +36,7 @@ public class Tariff {
 	@Temporal(TemporalType.DATE)
 	private Calendar untilDate;
 	private int cost;
-	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY, mappedBy = "tariff")
+	@ManyToMany(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private List<Person> person;
 
 	public Tariff() {

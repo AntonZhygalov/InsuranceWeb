@@ -38,7 +38,7 @@ public class Person {
 	private Date dateOfRegistration;
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirsthday;
-	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY)
+	@ManyToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY, mappedBy = "person")
 	List<Tariff> tariff;
 
 	public Person() {
