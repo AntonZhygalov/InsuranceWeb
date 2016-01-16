@@ -19,3 +19,20 @@ td{
 	border:1px solid #2E2E2E;
 	background-color: #E6E6E6;
 }
+.home{
+	display: inline-block;
+	width:100%;
+	text-align: center;
+}
+.hederOne{
+	display: inline-block;
+	float: left ;	
+	width: 30%;
+	text-align: right;
+}
+.hederTwo{
+	display: inline-block;
+	float: left ;	
+	width: 70%;
+	text-align: center;
+}
