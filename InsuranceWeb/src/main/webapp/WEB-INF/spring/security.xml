@@ -13,7 +13,7 @@
 			яким вони будуть перевірятись -->
 		<intercept-url pattern="/" access="permitAll" />
 		<intercept-url pattern="/show*" access="isAuthenticated()" />
-		<intercept-url pattern="/create*" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/create*" access="isAuthenticated()" />
 		<intercept-url pattern="/remove*" access="hasRole('ADMIN')" />
 
 		<!-- Деактивує csrf фільтр -->
@@ -21,7 +21,7 @@
 
 		<!-- Описує процес логінування (login-page - URL сторінки логінування; 
 			login-processing-url - URL, яка здійснює логінування -->
-		<form-login />
+		<form-login default-target-url="/showAllPersons" />
 
 		<!-- Описує Logout процес (logout-url - URL, яка здійснює вихід користувача 
 			з сесії (якщо csrf не відключений, то повинен бути HTTP POST METHOD), logout-success-url 
