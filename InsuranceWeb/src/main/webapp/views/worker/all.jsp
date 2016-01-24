@@ -72,8 +72,8 @@
 			</div>
 		</form>
 	</div>
-	
-		<div class="new">
+
+	<div class="new">
 		<p class="user">zones:</p>
 		<table class="new">
 			<thead>
@@ -97,5 +97,101 @@
 		</table>
 	</div>
 	<a href="createNewZone">update zone</a>
+	<a href="removeZone">removeZonee</a>
+	<div class="new">
+		<p class="user">additionalConditions:</p>
+		<table class="new">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>coef</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+				<c:forEach var="additionalCondition" items="${additionalConditions}">
+					<tr>
+						<td>${additionalCondition.id}</td>
+						<td>${additionalCondition.additionalConditions}</td>
+						<td>${additionalCondition.coef}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<a href="createNewAdditionalConditions">createNewAdditionalConditions</a>
+	
+	<div class="new">
+		<p class="user">franchise:</p>
+		<table class="new">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>coef</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+				<c:forEach var="franchise" items="${franchises}">
+					<tr>
+						<td>${franchise.id}</td>
+						<td>${franchise.sumFranchise}</td>
+						<td>${franchise.coef}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<div class="new">
+		<p class="user">InsuranceAmount:</p>
+		<table class="new">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>coef</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+				<c:forEach var="insuranceAmount" items="${insuranceAmounts}">
+					<tr>
+						<td>${insuranceAmount.id}</td>
+						<td>${insuranceAmount.sumInsurance}</td>
+						<td>${insuranceAmount.coef}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<div class="new">
+		<p class="user">program:</p>
+		<table class="new">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>coef</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+				<c:forEach var="program" items="${programs}">
+					<tr>
+						<td>${program.id}</td>
+						<td>${program.program}</td>
+						<td>${program.coef}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+
 </body>
 </html>

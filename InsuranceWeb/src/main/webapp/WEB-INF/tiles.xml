@@ -50,4 +50,9 @@
 		<put-attribute name="body" value="/views/zone/{1}.jsp"></put-attribute>
 		<put-attribute name="title" value="zone {1}"></put-attribute>
 	</definition>
+		<definition name="additionalConditions-*" extends="base.definition">
+	<!-- {1} - те, що приходитиме замість * (в нашому випадку, all i new) -->
+		<put-attribute name="body" value="/views/additionalConditions/{1}.jsp"></put-attribute>
+		<put-attribute name="title" value="additionalConditions {1}"></put-attribute>
+	</definition>
 </tiles-definitions>

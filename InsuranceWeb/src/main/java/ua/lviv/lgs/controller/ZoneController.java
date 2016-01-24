@@ -46,8 +46,8 @@ public class ZoneController {
 	}
 
 	@RequestMapping(value = "/insertRemoveZone")
-	public String removeZone(@RequestParam(value = "Id") String number) {
-		zoneService.removeZone(number);
+	public String removeZone(@RequestParam(value = "name") String name) {
+		zoneService.removeZone(name);
 		return "redirect:/showAllWorkers";
 	}
 }

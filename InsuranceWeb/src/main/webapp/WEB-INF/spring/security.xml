@@ -37,7 +37,7 @@
 		<authentication-provider>
 			<!-- "Хардкодне" оголошення користувачів системи. -->
 			<user-service>
-				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+				<user name="a" password="a" authorities="ROLE_ADMIN" />
 				<user name="user" password="user" authorities="ROLE_USER" />
 			</user-service>
 

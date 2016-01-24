@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<form action="insertZone" method="post">
+	<form action="insertAdditionalConditions" method="post">
 		<h2>Input Data</h2>
 		<div >
 			<p>name</p><p> <input type="text" name="name"></p>
@@ -19,21 +19,24 @@
 		<div>
 			<p>coef </p><p><input type="text" name="coef"></p>
 		</div>
+		
+
 		<div>
 			<button type="submit">Submit</button>
 		</div>
 	</form>
-	<form action="insertRemoveZone" method="post">
+	<form action="insertRemoveAdditionalConditions" method="post">
 		<h2>Input Data</h2>
 		<div >
 			<p>name</p><p> <input type="text" name="name"></p>
 		</div>
+	
 		
+
 		<div>
 			<button type="submit">Submit</button>
 		</div>
-	</form>
-		
+		</form>
 
 </body>
 </html>
