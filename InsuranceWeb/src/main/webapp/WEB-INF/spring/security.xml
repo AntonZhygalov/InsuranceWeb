@@ -28,16 +28,27 @@
 			- URL, по якій перейде програма після здійснення виходу -->
 		<logout logout-url="/logout" logout-success-url="/" />
 	</http>
-
+	<!-- Bean криптування паролю. Необхіден для того, щоб Spring Security знав 
+		по якому принципу записані паролі в базі -->
+	<beans:bean id="encoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></beans:bean>
 	<!-- Описує користувачів системи. -->
 	<authentication-manager>
 		<authentication-provider>
-		<!-- "Хардкодне" оголошення користувачів системи. -->
+			<!-- "Хардкодне" оголошення користувачів системи. -->
 			<user-service>
 				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
 				<user name="user" password="user" authorities="ROLE_USER" />
 			</user-service>
 
 		</authentication-provider>
+	<!-- За знаходження користувача в базі даних відповідає userDetailsService 
+			bean, клас якого описаний в service пакеті -->
+		<authentication-provider user-service-ref="userDetailsService">
+			<!-- Посилання на encoder bean. Відповідає за криптування -->
+			<password-encoder ref="encoder"></password-encoder>
+		</authentication-provider>
 	</authentication-manager>
+
+	<beans:import resource="classpath:/META-INF/context.xml" />
 </beans:beans>

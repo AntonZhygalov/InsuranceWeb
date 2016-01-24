@@ -12,6 +12,7 @@
 	<div class="hederTwo">
 		<a href="showAllPersons">Show Persons</a> 
 		<a href="showAllTariff">Show Tariff</a>
+		<a href="showAllWorkers">Show Users</a>
 	</div>
 
 	<div class="hederOne">
