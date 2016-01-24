@@ -16,7 +16,7 @@ public class TariffDTO {
 	private int limitDay;
 	private String fromDate;
 	private String untilDate;
-	private int cost;
+	private double cost;
 	private String personId;
 
 	public int getId() {
@@ -91,11 +91,11 @@ public class TariffDTO {
 		this.untilDate = dateFormat.format(untilDate.getTime());
 	}
 
-	public int getCost() {
+	public double getCost() {
 		return cost;
 	}
 
-	public void setCost(int cost) {
+	public void setCost(double cost) {
 		this.cost = cost;
 	}
 

@@ -5,9 +5,9 @@ import java.util.List;
 import ua.lviv.lgs.entity.Franchise;
 
 public interface FranchiseService {
-	void saveFranchise(String franchise);
+	void saveFranchise(String franchise, String coef);
 
-	void removeFranchise(String franchise);
+	void removeFranchise(String franchise, String coef);
 
 	void updateFranchise(String franchise);
 

@@ -16,13 +16,14 @@ public class ZoneServiceImpl implements ZoneService {
 	private ZoneDao zoneDao;
 
 	@Transactional
-	public void saveZone(String zone) {
-		this.zoneDao.saveZone(new Zone(zone));
+	public void saveZone(String zone, String coef) {
+		this.zoneDao.saveZone(new Zone(zone, Double.parseDouble(coef)));
 	}
 
 	@Transactional
 	public void removeZone(String zone) {
-		this.zoneDao.removeZone(new Zone(zone));
+		Zone newzone = zoneDao.findZoneById(Integer.parseInt(zone));
+		this.zoneDao.removeZone(newzone);
 	}
 
 	@Transactional

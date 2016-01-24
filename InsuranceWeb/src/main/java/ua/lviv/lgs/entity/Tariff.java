@@ -31,11 +31,12 @@ public class Tariff {
 	@ManyToOne(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private InsuranceAmount insuranceAmount;
 	private int limitDay;
+	private double coef;
 	@Temporal(TemporalType.DATE)
 	private Calendar fromDate;
 	@Temporal(TemporalType.DATE)
 	private Calendar untilDate;
-	private int cost;
+	private double cost;
 	@ManyToMany(cascade = { CascadeType.MERGE}, fetch = FetchType.LAZY)
 	private List<Person> person;
 
@@ -114,11 +115,11 @@ public class Tariff {
 		this.untilDate = untilDate;
 	}
 
-	public int getCost() {
+	public double getCost() {
 		return cost;
 	}
 
-	public void setCost(int cost) {
+	public void setCost(double cost) {
 		this.cost = cost;
 	}
 
@@ -128,6 +129,14 @@ public class Tariff {
 
 	public void setPerson(List<Person> person) {
 		this.person = person;
+	}
+
+	public double getCoef() {
+		return coef;
+	}
+
+	public void setCoef(double coef) {
+		this.coef = coef;
 	}
 
 	@Override

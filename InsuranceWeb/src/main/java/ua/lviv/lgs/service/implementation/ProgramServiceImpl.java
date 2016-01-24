@@ -14,17 +14,17 @@ public class ProgramServiceImpl implements ProgramService {
 	@Autowired
 	private ProgramDao programDao;
 
-	public void saveProgram(String program) {
-		this.programDao.saveProgram(new Program(program));
+	public void saveProgram(String program, String coef) {
+		this.programDao.saveProgram(new Program(program, Double.parseDouble(coef)));
 	}
 
-	public void removeProgram(String program) {
-		this.programDao.removeProgram(new Program(program));
+	public void removeProgram(String program, String coef) {
+		this.programDao.removeProgram(new Program(program, Double.parseDouble(coef)));
 	}
 
 	public void updateProgram(String program) {
 		Program prog = programDao.findProgramById(Integer.parseInt(program));
-		prog.setType(program);
+		prog.setProgram(program);
 		programDao.updateProgram(prog);
 	}
 

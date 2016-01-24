@@ -5,9 +5,9 @@ import java.util.List;
 import ua.lviv.lgs.entity.AdditionalConditions;
 
 public interface AdditionalConditionsService {
-	void saveAdditionalConditions(String additionalConditions);
+	void saveAdditionalConditions(String additionalConditions, String coef);
 
-	void removeAdditionalConditions(String additionalConditions);
+	void removeAdditionalConditions(String additionalConditions, String coef);
 	
 	void updateAdditionalConditions(String IdAdditionalConditions);
 	

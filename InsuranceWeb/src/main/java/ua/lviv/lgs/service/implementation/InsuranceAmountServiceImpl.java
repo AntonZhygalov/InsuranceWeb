@@ -12,12 +12,12 @@ public class InsuranceAmountServiceImpl implements InsuranceAmountService {
 	@Autowired
 	public InsuranceAmountDao insuranceAmount;
 
-	public void saveInsuranceAmount(String insuranceAmount) {
-		this.insuranceAmount.saveInsuranceAmount(new InsuranceAmount(insuranceAmount));
+	public void saveInsuranceAmount(String insuranceAmount, String coef) {
+		this.insuranceAmount.saveInsuranceAmount(new InsuranceAmount(insuranceAmount, Double.parseDouble(coef)));
 	}
 
-	public void removeInsuranceAmount(String insuranceAmount) {
-		this.insuranceAmount.removeInsuranceAmount(new InsuranceAmount(insuranceAmount));
+	public void removeInsuranceAmount(String insuranceAmount, String coef) {
+		this.insuranceAmount.removeInsuranceAmount(new InsuranceAmount(insuranceAmount, Double.parseDouble(coef)));
 	}
 
 	public void updateInsuranceAmount(String IDInsuranceAmount) {

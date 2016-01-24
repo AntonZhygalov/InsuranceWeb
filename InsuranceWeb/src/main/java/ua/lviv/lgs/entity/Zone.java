@@ -16,6 +16,7 @@ public class Zone {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String zone;
+	private double coef;
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY,mappedBy="zone")
 	private List<Tariff> tariff;
 
@@ -23,18 +24,17 @@ public class Zone {
 
 	}
 
-	public Zone(String zone) {
+	public Zone(String zone, double coef) {
 		super();
 		this.zone = zone;
+		this.coef = coef;
 	}
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+
 
 	public String getZone() {
 		return zone;
@@ -50,6 +50,14 @@ public class Zone {
 
 	public void setTariff(List<Tariff> tariff) {
 		this.tariff = tariff;
+	}
+
+	public double getCoef() {
+		return coef;
+	}
+
+	public void setCoef(double coef) {
+		this.coef = coef;
 	}
 
 	@Override

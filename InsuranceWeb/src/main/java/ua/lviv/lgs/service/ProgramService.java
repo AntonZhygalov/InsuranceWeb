@@ -6,9 +6,9 @@ import ua.lviv.lgs.entity.Program;
 
 public interface ProgramService {
 
-	void saveProgram(String program);
+	void saveProgram(String program, String coef);
 
-	void removeProgram(String program);
+	void removeProgram(String program, String coef);
 	
 	void updateProgram(String program);
 

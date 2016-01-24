@@ -5,7 +5,7 @@ import java.util.List;
 import ua.lviv.lgs.entity.Zone;
 
 public interface ZoneService {
-	void saveZone(String zone);
+	void saveZone(String zone, String coef);
 
 	void removeZone(String zone);
 

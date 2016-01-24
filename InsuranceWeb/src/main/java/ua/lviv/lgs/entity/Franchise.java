@@ -16,6 +16,7 @@ public class Franchise {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String sumFranchise;
+	private double coef;
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY, mappedBy = "franchise")
 	private List<Tariff> tariff;
 
@@ -23,18 +24,17 @@ public class Franchise {
 
 	}
 
-	public Franchise(String sumFranchise) {
+	public Franchise(String sumFranchise, double coef) {
 		super();
 		this.sumFranchise = sumFranchise;
+		this.coef = coef;
 	}
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+
 
 	public String getSumFranchise() {
 		return sumFranchise;
@@ -50,6 +50,14 @@ public class Franchise {
 
 	public void setTariff(List<Tariff> tariff) {
 		this.tariff = tariff;
+	}
+
+	public double getCoef() {
+		return coef;
+	}
+
+	public void setCoef(double coef) {
+		this.coef = coef;
 	}
 
 	@Override

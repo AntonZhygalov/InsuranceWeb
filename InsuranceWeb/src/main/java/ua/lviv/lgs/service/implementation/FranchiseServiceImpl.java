@@ -13,12 +13,12 @@ public class FranchiseServiceImpl implements FranchiseService {
 	@Autowired
 	public FranchiseDao franchiseDao;
 	
-	public void saveFranchise(String franchise){
-		franchiseDao.saveFranchise(new Franchise(franchise));
+	public void saveFranchise(String franchise, String coef){
+		franchiseDao.saveFranchise(new Franchise(franchise, Double.parseDouble(coef)));
 	}
 
-public	void removeFranchise(String franchise){
-	this.franchiseDao.removeFranchise(new Franchise(franchise));
+public	void removeFranchise(String franchise, String coef){
+	this.franchiseDao.removeFranchise(new Franchise(franchise, Double.parseDouble(coef)));
 }
 
 	public void updateFranchise(String franchise){

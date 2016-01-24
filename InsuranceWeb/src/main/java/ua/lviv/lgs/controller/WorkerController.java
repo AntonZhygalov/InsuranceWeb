@@ -8,15 +8,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import ua.lviv.lgs.service.WorkerService;
+import ua.lviv.lgs.service.ZoneService;
 
 @Controller
 public class WorkerController {
 	@Autowired
 	private WorkerService workerService;
+	@Autowired
+	private ZoneService zoneService;
 
 	@RequestMapping(value = "/showAllWorkers")
 	public String getUser(Model model) {
 		model.addAttribute("workers", workerService.findAllWorkers());
+		model.addAttribute("zones",zoneService.findAllZone() );
 		return "worker-all";
 	}
 

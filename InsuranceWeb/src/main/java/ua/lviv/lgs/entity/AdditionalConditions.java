@@ -19,24 +19,24 @@ public class AdditionalConditions {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String additionalConditions;
+	private double coef;
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY, mappedBy = "additionalConditions")
 	private List<Tariff> tariff;
 
 	public AdditionalConditions() {
 	}
 
-	public AdditionalConditions(String additionalConditions) {
+	public AdditionalConditions(String additionalConditions, double coef) {
 		super();
 		this.additionalConditions = additionalConditions;
+		this.coef = coef;
 	}
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+
 
 	public String getAdditionalConditions() {
 		return additionalConditions;
@@ -52,6 +52,14 @@ public class AdditionalConditions {
 
 	public void setTariff(List<Tariff> tariff) {
 		this.tariff = tariff;
+	}
+
+	public double getCoef() {
+		return coef;
+	}
+
+	public void setCoef(double coef) {
+		this.coef = coef;
 	}
 
 	@Override

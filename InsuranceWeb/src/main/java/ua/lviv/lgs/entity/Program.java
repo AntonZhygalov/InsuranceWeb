@@ -16,6 +16,7 @@ public class Program {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String program;
+	private double coef;
 	@OneToMany(cascade = { CascadeType.MERGE, CascadeType.REMOVE }, fetch = FetchType.LAZY, mappedBy = "program")
 	private List<Tariff> tariff;
 
@@ -23,24 +24,24 @@ public class Program {
 
 	}
 
-	public Program(String type) {
+	public Program(String program, double coef) {
 		super();
 		this.program = program;
+		this.coef = coef;
+		
 	}
 
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 
 	public String getProgram() {
 		return program;
 	}
 
-	public void setType(String type) {
+	public void setProgram(String program) {
 		this.program = program;
 	}
 
@@ -50,6 +51,14 @@ public class Program {
 
 	public void setTariff(List<Tariff> tariff) {
 		this.tariff = tariff;
+	}
+
+	public double getCoef() {
+		return coef;
+	}
+
+	public void setCoef(double coef) {
+		this.coef = coef;
 	}
 
 	@Override

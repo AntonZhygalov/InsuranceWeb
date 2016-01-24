@@ -15,13 +15,13 @@ public class AdditionalConditionsServiceImpl implements AdditionalConditionsServ
 	@Autowired
 	private AdditionalConditionsDao additionalConditions;
 
-	public void saveAdditionalConditions(String additionalConditions) {
-		this.additionalConditions.saveAdditionalConditions(new AdditionalConditions(additionalConditions));
+	public void saveAdditionalConditions(String additionalConditions, String coef) {
+		this.additionalConditions.saveAdditionalConditions(new AdditionalConditions(additionalConditions, Double.parseDouble(coef)));
 
 	}
 
-	public void removeAdditionalConditions(String additionalConditions) {
-		this.additionalConditions.removeAdditionalConditions(new AdditionalConditions(additionalConditions));
+	public void removeAdditionalConditions(String additionalConditions, String coef) {
+		this.additionalConditions.removeAdditionalConditions(new AdditionalConditions(additionalConditions, Double.parseDouble(coef)));
 
 	}
 
@@ -38,5 +38,7 @@ public class AdditionalConditionsServiceImpl implements AdditionalConditionsServ
 	public List<AdditionalConditions> findAllAdditionalConditions() {
 		return additionalConditions.findAllAdditionalConditions();
 	}
+
+	
 
 }

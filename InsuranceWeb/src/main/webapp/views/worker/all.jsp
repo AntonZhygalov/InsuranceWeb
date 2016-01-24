@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="z"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -71,5 +72,30 @@
 			</div>
 		</form>
 	</div>
+	
+		<div class="new">
+		<p class="user">zones:</p>
+		<table class="new">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>name</th>
+					<th>coef</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
+				<c:forEach var="zone" items="${zones}">
+					<tr>
+						<td>${zone.id}</td>
+						<td>${zone.zone}</td>
+						<td>${zone.coef}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<a href="createNewZone">update zone</a>
 </body>
 </html>

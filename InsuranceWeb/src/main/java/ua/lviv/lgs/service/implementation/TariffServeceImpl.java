@@ -76,9 +76,9 @@ public class TariffServeceImpl implements TariffService {
 			tariffDTO.setLimitDay(tariffs.get(i).getLimitDay());
 
 			for (int j = 0; j < tariffs.get(i).getPerson().size(); j++) {
-				
-				person += tariffs.get(i).getPerson().get(j).getId()+", ";
-				
+
+				person += tariffs.get(i).getPerson().get(j).getId() + ", ";
+
 			}
 			tariffDTO.setPersonId(person);
 			tariffDTOList.add(tariffDTO);
@@ -93,8 +93,10 @@ public class TariffServeceImpl implements TariffService {
 				Integer.parseInt(fromDay));
 		Calendar untilDate = new GregorianCalendar(1 + Integer.parseInt(fromYear), Integer.parseInt(fromMonth),
 				Integer.parseInt(fromDay));
-		int cost = 0;
+
 		Tariff tariff = new Tariff();
+
+		tariff.setCoef(2);
 		tariff.setLimitDay(Integer.parseInt(limitDay));
 		tariff.setFromDate(fromDate);
 		tariff.setUntilDate(untilDate);
@@ -107,11 +109,16 @@ public class TariffServeceImpl implements TariffService {
 		tariff.setInsuranceAmount(insuranceAmountService.findInsuranceAmountById(Integer.parseInt(insuranceAmount)));
 		tariff.setProgram(programService.findProgramById(Integer.parseInt(program)));
 		tariff.setZone(zoneService.findZoneById(Integer.parseInt(zone)));
+		tariff.setCost(costByTariff(tariff));
 		this.tariffDao.saveTariff(tariff);
 		pesonService.findPersonById(person).getTariff().add(tariff);
 	}
 
-	public double costByTariff() {
-		return 0;
+	public double costByTariff(Tariff tariff) {
+		double sum = tariff.getAdditionalConditions().getCoef() * tariff.getFranchise().getCoef()
+				* tariff.getInsuranceAmount().getCoef() * tariff.getProgram().getCoef() * tariff.getZone().getCoef()
+				* tariff.getCoef() * tariff.getLimitDay();
+		return sum;
 	}
+
 }
