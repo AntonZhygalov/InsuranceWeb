@@ -20,12 +20,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+	<div>
+	<video src='<c:url value="/resources/348307873.mp4"></c:url>' autoplay loop> </video>
+	</div>
+
 	<div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
             <div class="form-login">
-            <h4>Welcome back.</h4>
+            <h4>Insurance your life. Be safe.</h4>
             <form action="login" method="post">
             <input type="text" id="username" class="form-control input-sm chat-input" name="username" />
             </br>
@@ -43,5 +46,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

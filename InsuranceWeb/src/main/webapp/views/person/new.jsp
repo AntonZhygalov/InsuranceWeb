@@ -41,7 +41,7 @@
 			<p>addres</p> <p><input type="text" name="addres"></p>
 		</div>
 		<div>
-			<p>Date: </p><p><input type="text" id="datepicker" name="dateOfBirthsday"></p>
+			<p>Date of birthsday: </p><p><input type="text" id="datepicker" name="dateOfBirthsday"></p>
 		</div>
 
 		<div>

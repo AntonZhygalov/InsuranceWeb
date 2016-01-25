@@ -12,8 +12,9 @@
 	<div class="hederTwo">
 		<a href="showAllPersons">Show Persons</a> 
 		<a href="showAllTariff">Show Tariff</a>
+		<sec:authorize access="hasRole('ADMIN')">
 		<a href="showAllWorkers">Show Users</a>
-		
+		</sec:authorize>
 	</div>
 
 	<div class="hederOne">

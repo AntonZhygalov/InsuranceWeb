@@ -18,7 +18,7 @@
 				<th>Name</th>
 				<th>addres</th>
 				<th>date registration</th>
-				<th>date birthday</th>				
+				<th>date of birthsday</th>				
 				<th>identification</th>
 				<th>serial of passport</th>
 				<th>number of passport</th>
