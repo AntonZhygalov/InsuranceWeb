@@ -8,7 +8,7 @@ public interface ProgramService {
 
 	void saveProgram(String program, String coef);
 
-	void removeProgram(String program, String coef);
+	void removeProgram(String program);
 	
 	void updateProgram(String program);
 

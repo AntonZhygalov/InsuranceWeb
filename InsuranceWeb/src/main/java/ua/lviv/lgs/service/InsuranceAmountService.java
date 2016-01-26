@@ -8,7 +8,7 @@ import ua.lviv.lgs.entity.InsuranceAmount;
 public interface InsuranceAmountService {
 	void saveInsuranceAmount(String insuranceAmount, String coef);
 
-	void removeInsuranceAmount(String insuranceAmount, String coef);
+	void removeInsuranceAmount(String insuranceAmount);
 
 	void updateInsuranceAmount(String insuranceAmount);
 

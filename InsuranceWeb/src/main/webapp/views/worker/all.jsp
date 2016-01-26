@@ -96,8 +96,7 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewZone">update zone</a>
-	<a href="removeZone">removeZonee</a>
+	<a href="createNewZone">create/remove Zone</a>
 	<div class="new">
 		<p class="user">additionalConditions:</p>
 		<table class="new">
@@ -121,7 +120,7 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewAdditionalConditions">createNewAdditionalConditions</a>
+	<a href="createNewAdditionalConditions">create/remove AdditionalConditions</a>
 	
 	<div class="new">
 		<p class="user">franchise:</p>
@@ -146,6 +145,7 @@
 			</tbody>
 		</table>
 	</div>
+	<a href="createNewFranchise">create/remove Franchise</a>
 	<div class="new">
 		<p class="user">InsuranceAmount:</p>
 		<table class="new">
@@ -169,6 +169,7 @@
 			</tbody>
 		</table>
 	</div>
+	<a href="createNewInsuranceAmount">create/remove InsuranceAmount</a>
 	<div class="new">
 		<p class="user">program:</p>
 		<table class="new">
@@ -192,6 +193,6 @@
 			</tbody>
 		</table>
 	</div>
-
+<a href="createNewProgram">create/remove Program</a>
 </body>
 </html>
