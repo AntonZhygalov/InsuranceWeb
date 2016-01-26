@@ -23,6 +23,19 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+	$(function() {
+		$("#datepicker").datepicker({
+			dateFormat : "yy-mm-dd"
+		});
+
+	});
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -53,35 +66,37 @@
 			</select>
 		</div>
 
-<div class="dropdown">
+		<div class="dropdown">
 			<p>zone</p>
 			<select name="zone" class="btn btn-default dropdown-toggle">
-			<s:forEach var="zone" items="${zones}">
+				<s:forEach var="zone" items="${zones}">
 					<option value="${zone.id}">${zone.zone}</option>
 				</s:forEach>
 			</select>
 		</div>
-		
-	<div class="dropdown">
-				<p>additionalConditions</p>
-			<select name="additionalConditions" class="btn btn-default dropdown-toggle">
-			<z:forEach var="additionalConditions"
+
+		<div class="dropdown">
+			<p>additionalConditions</p>
+			<select name="additionalConditions"
+				class="btn btn-default dropdown-toggle">
+				<z:forEach var="additionalConditions"
 					items="${additionalConditions}">
 					<option value="${additionalConditions.id}">${additionalConditions.additionalConditions}</option>
 				</z:forEach>
 			</select>
 		</div>
-		
+
 		<div class="dropdown">
-				<p>insuranceAmount</p>
-			<select name="insuranceAmount" class="btn btn-default dropdown-toggle">
-			<x:forEach var="insuranceAmount" items="${insuranceAmounts}">
+			<p>insuranceAmount</p>
+			<select name="insuranceAmount"
+				class="btn btn-default dropdown-toggle">
+				<x:forEach var="insuranceAmount" items="${insuranceAmounts}">
 					<option value="${insuranceAmount.id}">${insuranceAmount.sumInsurance}</option>
 				</x:forEach>
 			</select>
 		</div>
-		
-		
+
+
 
 		<div>
 			<p>limitDay</p>
@@ -90,21 +105,9 @@
 			</p>
 		</div>
 		<div>
-			<p>fromDay</p>
+			<p>date :</p>
 			<p>
-				<input type="text" name="fromDay">
-			</p>
-		</div>
-		<div>
-			<p>fromMonth</p>
-			<p>
-				<input type="text" name="fromMonth">
-			</p>
-		</div>
-		<div>
-			<p>fromYear</p>
-			<p>
-				<input type="text" name="fromYear">
+				<input type="text" id="datepicker" name="date">
 			</p>
 		</div>
 		<div>

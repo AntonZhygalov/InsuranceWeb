@@ -68,15 +68,14 @@ public class TariffController {
 			@RequestParam(value = "additionalConditions") String additionalConditions,
 			@RequestParam(value = "insuranceAmount") String insuranceAmount,
 			@RequestParam(value = "limitDay") String limitDay,
-			@RequestParam(value = "fromDay") String fromDay,
-			@RequestParam(value = "fromMonth") String fromMonth,
-			@RequestParam(value = "fromYear") String  fromYear,
+			@RequestParam(value = "date") String date,
+			
 			@RequestParam(value = "person") String  person
 			
 			) {
-		System.out.println("1");
-		tariffService.saveTariff(limitDay, fromDay, fromMonth, fromYear,person,program,franchise,zone,additionalConditions,insuranceAmount);
-		System.out.println("2");
+	String []newate=date.split("-");
+		tariffService.saveTariff(limitDay, newate[2], newate[1], newate[0],person,program,franchise,zone,additionalConditions,insuranceAmount);
+		
 		return "redirect:/showAllTariff";
 	}
 
