@@ -62,7 +62,7 @@ public class TariffServeceImpl implements TariffService {
 		List<TariffDTO> tariffDTOList = new ArrayList<TariffDTO>();
 		List<Tariff> tariffs = tariffDao.findAllTariff();
 		for (int i = 0; i < tariffs.size(); i++) {
-			String person = "ID ";
+			String	person = null;
 			TariffDTO tariffDTO = new TariffDTO();
 			tariffDTO.setId(tariffs.get(i).getId());
 			tariffDTO.setAdditionalConditions(tariffs.get(i).getAdditionalConditions().getAdditionalConditions());
@@ -77,7 +77,7 @@ public class TariffServeceImpl implements TariffService {
 
 			for (int j = 0; j < tariffs.get(i).getPerson().size(); j++) {
 
-				person += tariffs.get(i).getPerson().get(j).getId() + ", ";
+				person = tariffs.get(i).getPerson().get(j).getfNamelName();
 
 			}
 			tariffDTO.setPersonId(person);

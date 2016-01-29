@@ -32,7 +32,7 @@
             <form action="login" method="post">
             <input type="text" id="username" class="form-control input-sm chat-input" name="username" />
             </br>
-            <input type="text" id="userpassword" class="form-control input-sm chat-input" name="password" />
+            <input type="password" id="userpassword" class="form-control input-sm chat-input" name="password" />
             </br>
             <div class="wrapper">
             <span class="group-btn">   
