@@ -42,8 +42,11 @@
 					<td>${tariff.untilDate}</td>
 					<td>${tariff.cost}</td>
 					<td>${tariff.personId}</td>
-
+					<td class="myInvisible"><form action="insertRemoveTariff" method="post">
+		<button class="glyphicon glyphicon-remove" name="Id" value ="${tariff.id}" type="submit">  </button>
+	</form></td>
 				</tr>
+				
 			</c:forEach>
 		</tbody>
 	</table>

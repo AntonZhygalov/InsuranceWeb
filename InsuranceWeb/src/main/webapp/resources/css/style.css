@@ -24,6 +24,10 @@ position: absolute;
 	text-align: center;
 
 }
+.glyphicon-remove {
+	color: red;
+	
+}
 h4{
 	color: #00FFFF;
 }
@@ -46,6 +50,10 @@ th {
 
 td {
 	border: 1px solid #2E2E2E;
+	background-color: #E6E6E6;
+}
+.myInvisible {
+	border: 1px solid transparent;
 	background-color: #E6E6E6;
 }
 

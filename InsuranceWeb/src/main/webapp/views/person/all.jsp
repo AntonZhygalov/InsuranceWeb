@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,13 +13,13 @@
 	<h2>Persons:</h2>
 	<table>
 		<thead>
-			<tr >
+			<tr>
 				<th>Id</th>
 				<th>number</th>
 				<th>Name</th>
 				<th>addres</th>
 				<th>date registration</th>
-				<th>date of birthsday</th>				
+				<th>date of birthsday</th>
 				<th>identification</th>
 				<th>serial of passport</th>
 				<th>number of passport</th>
@@ -37,7 +38,12 @@
 					<td>${person.identification}</td>
 					<td>${person.passportSeries}</td>
 					<td>${person.passportNumber}</td>
-					
+					<td class="myInvisible"><form action="insertRemovePerson"
+							method="post">
+							<button  class="glyphicon glyphicon-remove" name="number"
+								value="${person.id}" type="submit">
+							</button>
+						</form></td>
 
 				</tr>
 			</c:forEach>
@@ -45,7 +51,7 @@
 	</table>
 	<a href="createNewPersons">Create Person</a>
 	<sec:authorize access="hasRole('ADMIN')">
-	<a href="removePerson">Remove Person</a>
+		<a href="removePerson">Remove Person</a>
 	</sec:authorize>
 </body>
 </html>

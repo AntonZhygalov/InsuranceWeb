@@ -53,6 +53,13 @@
 						<td>${worker.id}</td>
 						<td>${worker.workerName}</td>
 						<td>${worker.workerPassword}</td>
+						<td class="myInvisible"><form action="insertRemoveWorker"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="number"
+								value="${worker.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -91,6 +98,13 @@
 						<td>${zone.id}</td>
 						<td>${zone.zone}</td>
 						<td>${zone.coef}</td>
+						<td class="myInvisible"><form action="insertRemoveZone"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="name"
+								value="${zone.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -115,6 +129,13 @@
 						<td>${additionalCondition.id}</td>
 						<td>${additionalCondition.additionalConditions}</td>
 						<td>${additionalCondition.coef}</td>
+							<td class="myInvisible"><form action="insertRemoveAdditionalConditions"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="name"
+								value="${additionalCondition.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
