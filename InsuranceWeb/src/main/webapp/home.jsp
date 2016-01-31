@@ -20,9 +20,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-	<video src='<c:url value="/resources/348307873.mp4"></c:url>' autoplay loop> </video>
-	</div>
+<!-- 	<div> -->
+<%-- 	<video src='<c:url value="/resources/348307873.mp4"></c:url>' autoplay loop> </video> --%>
+<!-- 	</div> -->
 
 	<div class="container">
     <div class="row">

@@ -5,11 +5,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import ua.lviv.lgs.DTO.PersonToShow;
+import ua.lviv.lgs.DTO.PersonDTO;
 import ua.lviv.lgs.entity.Person;
 import ua.lviv.lgs.service.PersonService;
 
@@ -59,15 +60,33 @@ public class PersonController {
 		personService.removePerson(number);
 		return "redirect:/showAllPersons";
 	}
+	@RequestMapping(value = "/upadatePerson{id}")
+	public String updatePagePerson(@PathVariable String id,Model model) {
+		Person person= personService.findPersonById(id);
+		model.addAttribute(person);
+		return "persons-update";
+	}
+	@RequestMapping(value = "/insertUpdatePersonId",method = RequestMethod.POST)
+	public String inserpUpdatePersonId(
+			@RequestParam(value = "id") String id,
+			@RequestParam(value = "fNamelName") String fNamelName,
+			@RequestParam(value = "number") String number,
+			@RequestParam(value = "passportSeries") String passportSeries,
+			@RequestParam(value = "passportNumber") String passportNumber,
+			@RequestParam(value = "identification") String identification,
+			@RequestParam(value = "addres") String addres,
+			@RequestParam(value = "dateOfBirsthday") String dateOfBirsthday) {	
+		personService.updatePerson(id,fNamelName, number, passportSeries, passportNumber, identification, addres, dateOfBirsthday);
+		
+		return "redirect:/showAllPersons";
+	}
+	
+	
+	@RequestMapping(value = "/insertPdfPerson")
+	public String inserpPdfPerson(@RequestParam(value ="id")String id) 
+		{
+		personService.createPDF(id);		
+		return "redirect:/showAllPersons";
+	}
 
-	// //@RequestParam отримує вхідне (введене) значення з веб сторінки,
-	// використовуючи ім'я input тегу.
-	// @RequestMapping(value = "/showAllPersons", method = RequestMethod.POST)
-	// public String createPerson(@RequestParam(value = "name") String name,
-	// @RequestParam(value = "country") String country) {
-	// personService.savePerson(fNamelName, number, passportSeries,
-	// passportNumber, identification, addres, dateOfRegistration,
-	// dateOfBirsthday);
-	// return "redirect:/showAllPersons";
-	// }
 }

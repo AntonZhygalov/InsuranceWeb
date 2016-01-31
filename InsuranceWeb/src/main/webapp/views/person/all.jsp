@@ -29,7 +29,7 @@
 			<!-- This is JSTL foreach cycle that allows web page to pass through collection. Items - attribute name, which was given at controller method -->
 			<c:forEach var="person" items="${persons}">
 				<tr>
-					<td>${person.id}</td>
+					<td><a href = "upadatePerson${person.id}" name ="id"> ${person.id}</a></td>
 					<td>${person.number}</td>
 					<td>${person.fNamelName}</td>
 					<td>${person.addres}</td>

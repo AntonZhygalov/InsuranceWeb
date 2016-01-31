@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import ua.lviv.lgs.DTO.PersonToShow;
+import ua.lviv.lgs.DTO.PersonDTO;
 import ua.lviv.lgs.entity.Person;
 
 public interface PersonService {
@@ -13,12 +13,14 @@ public interface PersonService {
 
 	void removePerson(String id);
 
-	void updatePerson(String fNamelName, String number, String passportSeries, String passportNumber,
+	void updatePerson(String id,String fNamelName, String number, String passportSeries, String passportNumber,
 			String identification, String addres, String dateOfBirthsday);
 
 	Person findPersonById(String id);
 
-	List<PersonToShow> findAllPerson();
+	List<PersonDTO> findAllPerson();
 	
 	List<Person> findAllPersonOfDateRegistration();
+
+	void createPDF(String id);
 }

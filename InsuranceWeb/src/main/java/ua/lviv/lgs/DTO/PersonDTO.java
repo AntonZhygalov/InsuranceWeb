@@ -5,8 +5,8 @@ import java.util.List;
 
 import ua.lviv.lgs.entity.Tariff;
 
-public class PersonToShow {
-		public PersonToShow() {
+public class PersonDTO {
+		public PersonDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
