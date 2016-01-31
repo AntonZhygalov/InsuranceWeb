@@ -67,12 +67,25 @@ td {
 	display: inline-block;
 	float: left;
 	width: 30%;
-	text-align: right;
+	text-align: center;
+	height: 50px;
 }
 
 .hederTwo {
 	display: inline-block;
 	float: left;
 	width: 70%;
-	text-align: center;
+	text-align: left;
+	padding-left: 25px;
+	height: 50px;
+}
+button.button{
+	margin-top: 10px;
+}
+.create{
+	margin-top: 10px;
+}
+
+p.user{ font-size: 17px;
+margin-bottom: 23px;
 }

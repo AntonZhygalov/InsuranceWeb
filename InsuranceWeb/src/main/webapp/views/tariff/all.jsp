@@ -50,9 +50,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="createNewTariff">Create Tariff</a>
+	<a href="createNewTariff"><button type="button" class="create" >Create Tariff</button></a>
 	<sec:authorize access="hasRole('ADMIN')">
-	<a href="removeTariff">Remove Tariff</a>
+	<a href="removeTariff"><button type="button" class="create" >Remove Tariff</button></a>
 	</sec:authorize>
 	
 

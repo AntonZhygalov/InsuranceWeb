@@ -49,9 +49,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="createNewPersons">Create Person</a>
+	<a href="createNewPersons"><button type="button" class="create" >Create Person</button></a>
 	<sec:authorize access="hasRole('ADMIN')">
-		<a href="removePerson">Remove Person</a>
+		<a href="removePerson"><button type="button" class="create">Remove Person</button></a>
 	</sec:authorize>
 </body>
 </html>

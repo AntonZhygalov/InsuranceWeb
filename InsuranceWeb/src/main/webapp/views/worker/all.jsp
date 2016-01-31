@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Settings:</h2>
 	<div class="new">
 		<form action="insertWorker" method="post">
 			<div class="name">
@@ -110,7 +111,8 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewZone">create/remove Zone</a>
+	<a href="createNewZone"><button type="button" class="button" >create/remove Zone</button></a>
+
 	<div class="new">
 		<p class="user">additionalConditions:</p>
 		<table class="new">
@@ -141,8 +143,8 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewAdditionalConditions">create/remove AdditionalConditions</a>
-	
+	<a href="createNewAdditionalConditions"><button type="button" class="button" >create/remove AdditionalConditions</button></a>
+
 	<div class="new">
 		<p class="user">franchise:</p>
 		<table class="new">
@@ -166,7 +168,8 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewFranchise">create/remove Franchise</a>
+	
+	<a href="createNewFranchise"><button type="button" class="button">create/remove Franchise</button></a>
 	<div class="new">
 		<p class="user">InsuranceAmount:</p>
 		<table class="new">
@@ -190,7 +193,8 @@
 			</tbody>
 		</table>
 	</div>
-	<a href="createNewInsuranceAmount">create/remove InsuranceAmount</a>
+	<a href="createNewInsuranceAmount"><button type="button" class="button">create/remove insuranceAmount</button></a>
+
 	<div class="new">
 		<p class="user">program:</p>
 		<table class="new">
@@ -214,6 +218,6 @@
 			</tbody>
 		</table>
 	</div>
-<a href="createNewProgram">create/remove Program</a>
+<a href="createNewProgram"><button type="button" class="button">create/remove Program </button></a>
 </body>
 </html>

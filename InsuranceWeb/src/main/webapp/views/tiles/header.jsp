@@ -10,13 +10,14 @@
 </head>
 <body>
 	<div class="hederTwo">
-		<a href="showAllPersons">Show Persons</a> 
-		<a href="showAllTariff">Show Tariff</a>
-		<sec:authorize access="hasRole('ADMIN')">
-		<a href="showAllWorkers">Show Users</a>
-		</sec:authorize>
-	</div>
 
+		<a href="showAllPersons"><button type="button" >Show Persons </button></a>
+		<a href="showAllTariff"><button type="button" >Show Tariff</button></a>
+		<sec:authorize access="hasRole('ADMIN')">
+		<a href="showAllWorkers"><button type="button" >Admin page</button></a>
+		</sec:authorize>
+		
+	</div>
 	<div class="hederOne">
 		<sec:authorize access="isAnonymous()">
 			<a href="login">Login</a>
