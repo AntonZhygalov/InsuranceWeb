@@ -18,33 +18,34 @@
 
 	});
 </script>
+ 
 </head>
-<body>
+<body  >
 	<form action="insert" method="post">
 		<h2>Input Data</h2>
-		<div style="color:red;">
-			<p>number</p><p> <input type="text" name="number" required></p>
+		<div class="input">
+			<p>number</p><p> <input type="text" name="number" required pattern="^[ 0-9]+$"></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>full name </p><p><input type="text" name="fNamelName" required></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>passportSeries </p><p><input type="text" name="passportSeries" required></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>passportNumber</p><p> <input type="text" name="passportNumber" required></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>identification</p> <p><input type="text" name="identification" required></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>addres</p> <p><input type="text" name="addres" required></p>
 		</div>
-		<div>
+		<div class="input">
 			<p>Date of birthsday: </p><p><input type="text" id="datepicker" name="dateOfBirthsday" required></p>
 		</div>
 
-		<div>
+		<div class="input">
 			<button type="submit">Submit</button>
 		</div>
 	</form>

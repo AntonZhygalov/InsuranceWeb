@@ -11,13 +11,11 @@
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
 	crossorigin="anonymous">
 
-<!-- Optional theme -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
@@ -43,7 +41,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="s"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="z"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x"%>
-
+ <style type="text/css">
+   body { 
+    background-color: #E0F2F7;
+   } 
+   .dropdown{ margin-bottom: 20px;}
+  </style>
 <body>
 	<form action="insertTafiff" method="post">
 		<h2>Input Data</h2>
@@ -97,25 +100,25 @@
 
 
 
-		<div>
+		<div class="input">
 			<p>limitDay</p>
 			<p>
-				<input type="text" name="limitDay" required>
+				<input type="text" name="limitDay" required pattern="^[ 0-9]+$">
 			</p>
 		</div>
-		<div>
+		<div class="input">
 			<p>date :</p>
 			<p>
 				<input type="text" id="datepicker" name="date" required>
 			</p>
 		</div>
-		<div>
+		<div class="input">
 			<p>person</p>
 			<p>
-				<input type="text" name="person" required>
+				<input type="text" name="person" required pattern="^[ 0-9]+$">
 			</p>
 		</div>
-		<div>
+		<div class="input">
 			<button type="submit">Submit</button>
 		</div>
 	</form>

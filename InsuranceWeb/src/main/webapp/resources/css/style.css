@@ -89,3 +89,10 @@ button.button{
 p.user{ font-size: 17px;
 margin-bottom: 23px;
 }
+.input{
+	display: inline-block;
+	float: left;
+	width: 100%;
+	padding-left: 25px;
+	height: 50px;
+}
