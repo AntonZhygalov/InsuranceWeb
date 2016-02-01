@@ -18,25 +18,25 @@
 
 	});
 </script>
- 
+
 </head>
 <body  >
 	<form action="insert" method="post">
 		<h2>Input Data</h2>
 		<div class="input">
-			<p>number</p><p> <input type="text" name="number" required pattern="^[ 0-9]+$"></p>
+			<p>number</p><p> <input type="text" name="number" required pattern="^[ 0-9]+$"  title="0-9"></p>
 		</div>
 		<div class="input">
-			<p>full name </p><p><input type="text" name="fNamelName" required></p>
+			<p>full name </p><p><input type="text" name="fNamelName" required pattern="^[А-Яа-яЇїІі\s]+$"  title="Aa-Яя"></p>
 		</div>
 		<div class="input">
-			<p>passportSeries </p><p><input type="text" name="passportSeries" required></p>
+			<p>passportSeries </p><p><input type="text" name="passportSeries" required pattern="[А-Яа-яЇїІі]{2}"  title="КС"></p>
 		</div>
 		<div class="input">
-			<p>passportNumber</p><p> <input type="text" name="passportNumber" required></p>
+			<p>passportNumber</p><p> <input type="text" name="passportNumber" required pattern="[0-9]{6}"  title="6 цифер"></p>
 		</div>
 		<div class="input">
-			<p>identification</p> <p><input type="text" name="identification" required></p>
+			<p>identification</p> <p><input type="text" name="identification" required pattern="[0-9]{10}"  title="10 цифер"></p>
 		</div>
 		<div class="input">
 			<p>addres</p> <p><input type="text" name="addres" required></p>
