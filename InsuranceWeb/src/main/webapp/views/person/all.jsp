@@ -38,20 +38,18 @@
 					<td>${person.identification}</td>
 					<td>${person.passportSeries}</td>
 					<td>${person.passportNumber}</td>
-					<td class="myInvisible"><form action="insertRemovePerson"
-							method="post">
-							<button  class="glyphicon glyphicon-remove" name="number"
+					<sec:authorize access="hasRole('ADMIN')"><td class="myInvisible">
+					<form action="insertRemovePerson"  method="post">
+						<button  class="glyphicon glyphicon-remove" name="number"
 								value="${person.id}" type="submit">
-							</button>
-						</form></td>
+				          	</button>
+					</form></td></sec:authorize>
 
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 	<a href="createNewPersons"><button type="button" class="create" >Create Person</button></a>
-	<sec:authorize access="hasRole('ADMIN')">
-		<a href="removePerson"><button type="button" class="create">Remove Person</button></a>
-	</sec:authorize>
+	
 </body>
 </html>
