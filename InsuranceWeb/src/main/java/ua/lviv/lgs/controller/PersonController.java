@@ -45,9 +45,15 @@ public class PersonController {
 			@RequestParam(value = "addres") String addres,
 			@RequestParam(value = "dateOfBirthsday") String dateOfBirthsday
 	) {
-		personService.savePerson(fNamelName, number, passportSeries, passportNumber, identification, addres,
-				dateOfBirthsday);
-		return "redirect:/showAllPersons";
+		if(personService.findAllIdPerson()!=null && personService.findAllIdPerson().contains(number))
+		{
+			return "persons-new"; 
+		}
+		else {
+			personService.savePerson(fNamelName, number, passportSeries, passportNumber, identification, addres,
+					dateOfBirthsday);
+			return "redirect:/showAllPersons";
+		}
 	}
 
 	@RequestMapping(value = "/removePerson")

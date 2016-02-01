@@ -68,11 +68,14 @@ public class TariffController {
 	}
 
 	@RequestMapping(value = "/insertTafiff", method = RequestMethod.POST)
-	public String createPerson(@RequestParam(value = "program") String program,
-			@RequestParam(value = "franchise") String franchise, @RequestParam(value = "zone") String zone,
+	public String createPerson(
+			@RequestParam(value = "program") String program,
+			@RequestParam(value = "franchise") String franchise, 
+			@RequestParam(value = "zone") String zone,
 			@RequestParam(value = "additionalConditions") String additionalConditions,
 			@RequestParam(value = "insuranceAmount") String insuranceAmount,
-			@RequestParam(value = "limitDay") String limitDay, @RequestParam(value = "date") String date,
+			@RequestParam(value = "limitDay") String limitDay, 
+			@RequestParam(value = "date") String date,
 
 	@RequestParam(value = "person") String person
 

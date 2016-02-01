@@ -187,4 +187,18 @@ public List<Person> findAllPersons() {
 	
 	return personDao.findAllPerson();
 }
+public List<String> findAllIdPerson(){
+	List<String> personsId=new ArrayList<String>();
+	List<Person>persons=personDao.findAllPerson();
+	for(int i=0;i<persons.size();i++)
+	{
+		personsId.add(String.valueOf(persons.get(i).getNumber()));
+	}
+	
+	if(personsId.size()!=0)
+	return personsId;
+	else {
+		return null;
+	}
+}
 }
