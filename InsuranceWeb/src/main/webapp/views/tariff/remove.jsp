@@ -10,7 +10,7 @@
 <!-- You may use form if you want to send some data to server. Action - URL which will be created when the button in pressed -->
 	<form action="insertRemoveTariff" method="post">
 		<h2>Input Data</h2>
-		number <input type="text" name="Id">
+		number <input type="text" name="Id" required>
 		<button type="submit">Submit</button>
 	</form>
 </body>

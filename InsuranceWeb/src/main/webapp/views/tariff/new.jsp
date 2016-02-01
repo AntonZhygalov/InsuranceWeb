@@ -100,19 +100,19 @@
 		<div>
 			<p>limitDay</p>
 			<p>
-				<input type="text" name="limitDay">
+				<input type="text" name="limitDay" required>
 			</p>
 		</div>
 		<div>
 			<p>date :</p>
 			<p>
-				<input type="text" id="datepicker" name="date">
+				<input type="text" id="datepicker" name="date" required>
 			</p>
 		</div>
 		<div>
 			<p>person</p>
 			<p>
-				<input type="text" name="person">
+				<input type="text" name="person" required>
 			</p>
 		</div>
 		<div>

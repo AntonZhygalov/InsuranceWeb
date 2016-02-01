@@ -20,13 +20,13 @@
 			<div class="useraddleft">
 				<p class="user">name</p>
 				<p class="user">
-					<input type="text" name="name">
+					<input type="text" name="name" required>
 				</p>
 			</div>
 			<div class="useraddright">
 				<p class="user">password</p>
 				<p class="user">
-					<input type="text" name="password">
+					<input type="text" name="password" required>
 				</p>
 			</div>
 
@@ -73,7 +73,7 @@
 			</div>
 			<div class="useraddleft">
 				<p class="user">id</p>
-				<input type="text" name="number">
+				<input type="text" name="number" required>
 			</div>
 			<div class="submit">
 				<button type="submit">Submit</button>
@@ -99,8 +99,7 @@
 						<td>${zone.id}</td>
 						<td>${zone.zone}</td>
 						<td>${zone.coef}</td>
-						<td class="myInvisible"><form action="insertRemoveZone"
-							method="post">
+						<td class="myInvisible"><form action="insertRemoveZone" method="post">
 							<button  class="glyphicon glyphicon-remove"  name="name"
 								value="${zone.id}" type="submit">
 							

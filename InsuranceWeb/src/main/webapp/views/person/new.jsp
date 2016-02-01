@@ -23,25 +23,25 @@
 	<form action="insert" method="post">
 		<h2>Input Data</h2>
 		<div style="color:red;">
-			<p>number</p><p> <input type="text" name="number"></p>
+			<p>number</p><p> <input type="text" name="number" required></p>
 		</div>
 		<div>
-			<p>full name </p><p><input type="text" name="fNamelName"></p>
+			<p>full name </p><p><input type="text" name="fNamelName" required></p>
 		</div>
 		<div>
-			<p>passportSeries </p><p><input type="text" name="passportSeries"></p>
+			<p>passportSeries </p><p><input type="text" name="passportSeries" required></p>
 		</div>
 		<div>
-			<p>passportNumber</p><p> <input type="text" name="passportNumber"></p>
+			<p>passportNumber</p><p> <input type="text" name="passportNumber" required></p>
 		</div>
 		<div>
-			<p>identification</p> <p><input type="text" name="identification"></p>
+			<p>identification</p> <p><input type="text" name="identification" required></p>
 		</div>
 		<div>
-			<p>addres</p> <p><input type="text" name="addres"></p>
+			<p>addres</p> <p><input type="text" name="addres" required></p>
 		</div>
 		<div>
-			<p>Date of birthsday: </p><p><input type="text" id="datepicker" name="dateOfBirthsday"></p>
+			<p>Date of birthsday: </p><p><input type="text" id="datepicker" name="dateOfBirthsday" required></p>
 		</div>
 
 		<div>
