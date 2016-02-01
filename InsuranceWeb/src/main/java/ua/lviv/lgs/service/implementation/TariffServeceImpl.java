@@ -39,7 +39,7 @@ public class TariffServeceImpl implements TariffService {
 	private ZoneService zoneService;
 	@Autowired
 	private ProgramService programService;
-
+	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 	@Transactional
 	public void removeTariff(String idTariff) {
 		this.tariffDao.removeTariff(findTariffById(idTariff));
@@ -71,8 +71,8 @@ public class TariffServeceImpl implements TariffService {
 			tariffDTO.setProgram(tariffs.get(i).getProgram().getProgram());
 			tariffDTO.setZone(tariffs.get(i).getZone().getZone());
 			tariffDTO.setCost(tariffs.get(i).getCost());
-			tariffDTO.setFromDate(tariffs.get(i).getFromDate());
-			tariffDTO.setUntilDate(tariffs.get(i).getUntilDate());
+			tariffDTO.setFromDate(dateFormat.format(tariffs.get(i).getFromDate().getTime()));
+			tariffDTO.setUntilDate(dateFormat.format(tariffs.get(i).getUntilDate().getTime()));
 			tariffDTO.setLimitDay(tariffs.get(i).getLimitDay());
 
 			for (int j = 0; j < tariffs.get(i).getPerson().size(); j++) {

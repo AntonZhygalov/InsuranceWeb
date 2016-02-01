@@ -79,16 +79,16 @@ public class TariffDTO {
 		return fromDate;
 	}
 
-	public void setFromDate(Calendar fromDate) {
-		this.fromDate = dateFormat.format(fromDate.getTime());
+	public void setFromDate(String fromDate) {
+		this.fromDate = fromDate;
 	}
 
 	public String getUntilDate() {
 		return untilDate;
 	}
 
-	public void setUntilDate(Calendar untilDate) {
-		this.untilDate = dateFormat.format(untilDate.getTime());
+	public void setUntilDate(String untilDate) {
+		this.untilDate= untilDate;
 	}
 
 	public double getCost() {

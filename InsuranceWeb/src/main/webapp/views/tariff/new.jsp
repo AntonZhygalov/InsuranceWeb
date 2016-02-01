@@ -100,12 +100,37 @@
 
 
 
-		<div class="input">
+<!-- 		<div class="input"> -->
+<!-- 			<p>limitDay</p> -->
+<!-- 			<p> -->
+<!-- 				<input type="text" name="limitDay" required pattern="^[ 0-9]+$"> -->
+<!-- 			</p> -->
+<!-- 		</div> -->
+		   
+		   
+		   
+		   <div class="dropdown">
 			<p>limitDay</p>
-			<p>
-				<input type="text" name="limitDay" required pattern="^[ 0-9]+$">
-			</p>
+			<select name="limitDay" class="btn btn-default dropdown-toggle">
+				
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="40">40 multy</option>
+					<option value="60">60 multy</option>
+					<option value="90">90 multy</option>
+					<option value="120">120 multy</option>
+					<option value="160">160 multy</option>
+					<option value="180">180 multy</option>
+					<option value="360">360 multy</option>
+			
+			</select>
 		</div>
+		   
+		   
+		   
+		   
+		   
 		<div class="input">
 			<p>date :</p>
 			<p>
