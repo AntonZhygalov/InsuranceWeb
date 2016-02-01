@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TariffDTO {
 	private int id;
-	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
 	private String program;
 	private String franchise;
 	private String zone;

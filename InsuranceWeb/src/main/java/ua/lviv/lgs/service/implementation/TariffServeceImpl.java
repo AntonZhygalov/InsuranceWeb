@@ -39,7 +39,7 @@ public class TariffServeceImpl implements TariffService {
 	private ZoneService zoneService;
 	@Autowired
 	private ProgramService programService;
-	SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	@Transactional
 	public void removeTariff(String idTariff) {
 		this.tariffDao.removeTariff(findTariffById(idTariff));
