@@ -118,7 +118,7 @@ public class TariffServeceImpl implements TariffService {
 		double sum = tariff.getAdditionalConditions().getCoef() * tariff.getFranchise().getCoef()
 				* tariff.getInsuranceAmount().getCoef() * tariff.getProgram().getCoef() * tariff.getZone().getCoef()
 				* tariff.getCoef() * tariff.getLimitDay();
-		return sum;
+		return Math.round(sum * Math.pow(10, 2)) / Math.pow(10, 2);
 	}
 
 }

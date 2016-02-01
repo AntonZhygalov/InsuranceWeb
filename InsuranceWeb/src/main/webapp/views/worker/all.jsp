@@ -162,6 +162,13 @@
 						<td>${franchise.id}</td>
 						<td>${franchise.sumFranchise}</td>
 						<td>${franchise.coef}</td>
+						<td class="myInvisible"><form action="insertRemoveFranchise"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="name"
+								value="${franchise.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -187,6 +194,13 @@
 						<td>${insuranceAmount.id}</td>
 						<td>${insuranceAmount.sumInsurance}</td>
 						<td>${insuranceAmount.coef}</td>
+							<td class="myInvisible"><form action="insertRemoveInsuranceAmount"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="name"
+								value="${insuranceAmount.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -212,6 +226,13 @@
 						<td>${program.id}</td>
 						<td>${program.program}</td>
 						<td>${program.coef}</td>
+							<td class="myInvisible"><form action="insertRemoveProgram"
+							method="post">
+							<button  class="glyphicon glyphicon-remove"  name="name"
+								value="${program.id}" type="submit">
+							
+							</button>
+						</form></td>
 					</tr>
 				</c:forEach>
 			</tbody>

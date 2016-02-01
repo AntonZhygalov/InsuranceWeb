@@ -31,10 +31,10 @@ public class AdditionalConditionsController {
 		return "redirect:/showAllWorkers";
 	}
 
-	@RequestMapping(value = "/removeAdditionalConditions")
-	public String createZoneAdditionalConditionsRemoveAdditionalConditions() {
-		return "additionalConditions-update";
-	}
+//	@RequestMapping(value = "/removeAdditionalConditions")
+//	public String createZoneAdditionalConditionsRemoveAdditionalConditions() {
+//		return "additionalConditions-update";
+//	}
 
 	@RequestMapping(value = "/insertRemoveAdditionalConditions")
 	public String removeAdditionalConditions(@RequestParam(value = "name") String name) {
