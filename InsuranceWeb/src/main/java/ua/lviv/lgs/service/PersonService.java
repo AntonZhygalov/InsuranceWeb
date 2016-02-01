@@ -19,6 +19,7 @@ public interface PersonService {
 	Person findPersonById(String id);
 
 	List<PersonDTO> findAllPerson();
+	List <Person> findAllPersons();
 	
 	List<Person> findAllPersonOfDateRegistration();
 

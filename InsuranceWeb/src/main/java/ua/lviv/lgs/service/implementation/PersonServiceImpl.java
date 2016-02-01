@@ -183,4 +183,8 @@ public void createPDF(String id) {
 	document.close();
 
 }
+public List<Person> findAllPersons() {
+	
+	return personDao.findAllPerson();
+}
 }
