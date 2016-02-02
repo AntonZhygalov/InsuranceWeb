@@ -82,17 +82,15 @@ public class PersonController {
 			@RequestParam(value = "identification") String identification,
 			@RequestParam(value = "addres") String addres,
 			@RequestParam(value = "dateOfBirsthday") String dateOfBirsthday) {	
-		personService.updatePerson(id,fNamelName, number, passportSeries, passportNumber, identification, addres, dateOfBirsthday);
+				
 		
-		return "redirect:/showAllPersons";
+			personService.updatePerson(id,fNamelName, number, passportSeries, passportNumber, identification, addres, dateOfBirsthday);
+			return "redirect:/showAllPersons";
+		
+		
 	}
 	
 	
-	@RequestMapping(value = "/insertPdfPerson")
-	public String inserpPdfPerson(@RequestParam(value ="id")String id) 
-		{
-		personService.createPDF(id);		
-		return "redirect:/showAllPersons";
-	}
+	
 
 }

@@ -57,9 +57,11 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	<a href="createNewTariff"><button type="button" class="create">Create
-			Tariff</button></a>
+	<a href="createNewTariff"><button type="button" class="create">Create	Tariff</button></a>
 	
+	<form action="insertPdfPerson" method="get">make check by id <input type="text" name="id">
+		<button type="submit">Submit</button>
+	</form>
 
 
 </body>

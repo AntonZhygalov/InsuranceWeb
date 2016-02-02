@@ -23,7 +23,7 @@ public interface PersonService {
 	
 	List<Person> findAllPersonOfDateRegistration();
 
-	void createPDF(String id);
+	
 	
 	List<String> findAllIdPerson();
 }

@@ -24,7 +24,7 @@
 	<form action="insert" method="post">
 		<h2>Input Data</h2>
 		<div class="input">
-			<p>number</p><p> <input type="text" name="number" required pattern="^[ 0-9]+$"  title="0-9"></p>
+			<p>number</p><p> <input type="text" name="number" required pattern="^[ 0-9]+$"  title="0-9" placeholder="унікальне число: 0-9"></p>
 		</div>
 		<div class="input">
 			<p>full name </p><p><input type="text" name="fNamelName" required pattern="^[А-Яа-яЇїІі\s]+$"  title="Aa-Яя"></p>

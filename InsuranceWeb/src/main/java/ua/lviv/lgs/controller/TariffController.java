@@ -76,8 +76,7 @@ public class TariffController {
 			@RequestParam(value = "insuranceAmount") String insuranceAmount,
 			@RequestParam(value = "limitDay") String limitDay, 
 			@RequestParam(value = "date") String date,
-
-	@RequestParam(value = "person") String person
+	        @RequestParam(value = "person") String person
 
 	) {
 		String[] newate = date.split("-");
@@ -95,6 +94,12 @@ public class TariffController {
 	@RequestMapping(value = "/insertRemoveTariff")
 	public String removePerson(@RequestParam(value = "Id") String number) {
 		tariffService.removeTariff(number);
+		return "redirect:/showAllTariff";
+	}
+	@RequestMapping(value = "/insertPdfPerson")
+	public String inserpPdfPerson(@RequestParam(value ="id")String id) 
+		{
+		tariffService.createPDF(id);		
 		return "redirect:/showAllTariff";
 	}
 }

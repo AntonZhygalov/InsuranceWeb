@@ -12,4 +12,6 @@ public interface TariffService {
 	Tariff findTariffById(String id);
 
 	List<TariffDTO> findAllTariff();
+	
+	void createPDF(String id);
 }
